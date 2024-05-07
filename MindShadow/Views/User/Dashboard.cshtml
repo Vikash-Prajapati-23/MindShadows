@@ -1,0 +1,199 @@
+﻿@{
+    ViewBag.Title = "Dashboard";
+}
+
+
+<div class="container-fluid">
+
+    <div class="dashboard d-flex">
+        <i class="fa-solid fa-bars me-2 dashboard-burger-icon" onclick="openNav()"></i>
+        <h4 class="dashborad-snav ">Dashboard</h4>
+    </div>
+
+
+    <div style="height:950px" class=" container-fluid m-auto w-75">
+        <div class="autochat">
+            <!-- <h1>Auto chat</h1> -->
+            <div>
+                <button type="button" class="autobutton" id="autochatbutton">chat us</button>
+                <div id="appenddiv" class="appenddivstyle">
+                    <p class="parastyle">Hello! Good Morning</p>
+                    <p class="parastyle">Thanks for Connect Us!</p>
+                    <p class="parastyle">Choose the following Option for help! </p>
+                    <div>
+                        <span class="diseases" id="Anxiety">Anxiety</span>
+                        <span class="diseases" id="Anorexia">Anorexia</span>
+                        <span class="diseases" id="Anger">Anger</span>
+                        <span class="diseases" id="Assertiveness">Assertiveness</span>
+                        <span class="diseases" id="Audiology">Audiology</span><br>
+                        <span class="diseases" id="Bipolar">Bipolar disorder</span><br>
+                        <span class="diseases" id="dysmorphia">Body dysmorphia (BDD)</span>
+                        <span class="diseases" id="Depression">Depression</span>
+                        <span class="diseases" id="Dissociation">Dissociation</span><br>
+                        <span class="diseases" id="Eating">Eating disorders</span><br>
+                        <span class="diseases" id="Generalized">Generalized anxiety (GAD)</span>
+                        <span class="diseases" id="Interpersonal">Interpersonal relationships</span>
+                    </div>
+                    <div class="forhelp" id="foranxiety">
+                        <p class="parastyle">Say more details about your Anxiety </p>
+                        <span class="symtom" id="Apprehension">Apprehension</span>
+                        <span class="symtom" id="confusion">confusion</span><br>
+                        <span class="symtom" id="helplessness">a sense of helplessness</span><br>
+                        <span class="symtom" id="thoughts">repeated negative thoughts</span><br>
+                        <span class="symtom" id="muscle">muscle tension</span>
+                        <span class="symtom" id="palpitations">palpitations</span>
+                        <span class="symtom" id="breathing">difficulty breathing</span>
+                    </div>
+                    <div class="forhelp" id="forAnorexia">
+                        <p class="parastyle">Say more details about your Anorexia </p>
+                        <span class="symtom" id="weight">Low body weight</span><br>
+                        <span class="symtom" id="denial">Denial of hunger</span><br>
+                        <span class="symtom" id="unusual">Unusual eating behaviors</span><br>
+                        <span class="symtom" id="fixation">Fixation with food preparation</span><br>
+                        <span class="symtom" id="altered">Altered body image</span><br>
+                        <span class="symtom" id="becoming">Extreme fear of becoming fat</span>
+                        <span class="symtom" id="excessive">Excessive physical activity</span>
+                    </div>
+                    <div class="forhelp" id="forAnger">
+                        <p class="parastyle">Say more details about your Anger </p>
+                        <span class="symtom" id="irritated">Easily irritated</span><br>
+                        <span class="symtom" id="overwhelmed">Overwhelmed</span>
+                        <span class="symtom" id="humiliated">Humiliated</span><br>
+                        <span class="symtom" id="control">Can't control yourself</span><br>
+                        <span class="symtom" id="nervous">Nervous</span>
+                        <span class="symtom" id="tense">Tense</span><br>
+                        <span class="symtom" id="relax">Unable to relax</span>
+                    </div>
+                    <div class="forhelp" id="forAssertiveness">
+                        <p class="parastyle">Say more details about your Assertiveness </p>
+                        <span class="symtom" id="act">You act like a different person</span><br>
+                        <span class="symtom" id="staying">Staying in an unhealthy</span><br>
+                        <span class="symtom" id="feelingself">Feeling self-conscious</span><br>
+                        <span class="symtom" id="fatigue">emotional fatigue</span><br>
+                        <span class="symtom" id="unhappiness">Unhappiness</span>
+                    </div>
+                    <div class="forhelp" id="forAudiology">
+                        <p class="parastyle">Say more details about your Audiology</p>
+                        <span class="symtom" id="muffling">Muffling of speech</span><br>
+                        <span class="symtom" id="words">Trouble understanding words</span><br>
+                        <span class="symtom" id="ears">Ringing in the ears</span><br>
+                        <span class="symtom" id="noise">bothered by background noise</span><br>
+                        <span class="symtom" id="sounds">Muffling of other sounds</span>
+                    </div>
+                    <div class="forhelp" id="forBipolar">
+                        <p class="parastyle">Say more details about your Bipolar Disorder</p>
+                        <span class="symtom" id="hopeless">Hopeless and Lethargic</span><br>
+                        <span class="symtom" id="feel">Feel Suicidal</span>
+                        <span class="symtom" id="more"> More Irritable</span><br>
+                        <span class="symtom" id="less">Requires less sleep</span><br>
+                        <span class="symtom" id="dangerous">Dangerous behaviour</span>
+                    </div>
+                    <div class="forhelp" id="fordysmorphia">
+                        <p class="parastyle">Say more details about your Body Dysmorphia</p>
+                        <span class="symtom" id="having">Having perfectionist tendencies</span><br>
+                        <span class="symtom" id="avoiding">Avoiding social situations</span>
+                    </div>
+                    <div class="forhelp" id="forDepression">
+                        <p class="parastyle">Say more details about your Depression </p>
+                        <span class="symtom" id="sadness">Persistent sadness</span><br>
+                        <span class="symtom" id="interest"> Loss of interest in activities</span><br>
+                        <span class="symtom" id="appetite">Loss of appetite</span><br>
+                        <span class="symtom" id="worthlessness">Feelings of worthlessness</span><br>
+                        <span class="symtom" id="agitated">Becoming easily agitated</span>
+                    </div>
+                    <div class="forhelp" id="forDissociation">
+                        <p class="parastyle">Say more details about your Dissociation </p>
+                        <span class="symtom" id="identity">Is it dissociative identity disorder?</span><br>
+                    </div>
+                    <div class="forhelp" id="forEating">
+                        <p class="parastyle">Say more details about your Eating </p>
+                        <span class="symtom" id="foods">Refusal to eat certain foods</span><br>
+                        <span class="symtom" id="discomfort"> Discomfort with eating</span><br>
+                        <span class="symtom" id="meals">Skipping meals</span>
+                        <span class="symtom" id="frequent">Frequent dieting</span><br>
+                        <span class="symtom" id="swings">Extreme mood swings</span>
+                    </div>
+                    <div class="forhelp" id="forGeneralized">
+                        <p class="parastyle">Say more details about your Generalized Disorder</p>
+                        <span class="symtom" id="asleep">Staying asleep</span>
+                        <span class="symtom" id="trembling"> Trembling</span>
+                        <span class="symtom" id="twitching">Twitching</span>
+                        <span class="symtom" id="headaches">Headaches</span>
+                        <span class="symtom" id="sweating">Sweating</span>
+                        <span class="symtom" id="hot">Hot flashes</span>
+                        <span class="symtom" id="irritability">Irritability</span>
+                    </div>
+                    <div class="forhelp" id="forInterpersonal">
+                        <p class="parastyle">Say more details about your Interpersonal relationships</p>
+                        <span class="symtom" id="trusting">Difficulty Trusting Others</span><br>
+                        <span class="symtom" id="fear"> Fear of Abandonment</span><br>
+                        <span class="symtom" id="poor">Poor Communication Skills:</span>
+                        <span class="symtom" id="emotional">Emotional Instability</span><br>
+                        <span class="symtom" id="manipulative">Manipulative Behavior</span><br>
+                        <span class="symtom" id="social">Social Withdrawal</span>
+                    </div>
+                    <div class="forhelp2" id="forapprehension">
+                        <p class="parastyle">You need to connect with a Doctor!</p>
+                        <span class="consult" id="consultDoctor">Consult a Specialist</span><br>
+                        <span class="consult">Get Tips</span>
+                        <span class="consult">Visit Clinic</span><br>
+                        <span class="consult" id="exit">exit</span>
+                    </div>
+                    <div class="forhelp3" id="forconsultdoctor">
+                        <p class="parastyle">List of Doctors</p>
+                        <span class="doctor" id="rupesh">Rupesh Mondal(MBBS)</span><br>
+                        <span class="doctor" id="manatosh">Manatosh Singh(MD)</span><br>
+                        <span class="doctor" id="Supriyo">Supriyo Dana(psychiatrist)</span><br>
+                        <span class="doctor" id="samaresh">Samaresh Bera(Pediatrict)</span><br>
+                        <span class="doctor" id="bilash"> Bilash Das(MBBS,MD)</span>
+                    </div>
+                    <div class="forhelp4" id="forrupesh">
+                        <h3>Connect</h3>
+                    </div>
+                    <div class="forhelp5" id="exit2">
+                        <h3>Exit</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="~/Content/JavaScript/chatbot.js"></script>
+    </div>
+
+    <div id="sideNav" class="side-nav">
+        <span class="close-btn" onclick="closeNav()">&times;</span>
+        <img class="User-img" src="~/Content/Img/user.png" alt="User Image">
+        <h4 style="text-align: center;" class="fw-bold my-2">User Name</h4>
+        @Html.ActionLink("\u2B9A AI Assistant", "AiAssistant", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Take self assesment test", "AiAssistant", "Home", new { area = "" }, new { @class = "side-nav-items", @Id="selftest-item" })
+        @Html.ActionLink("\u2B9A BMI Calculator", "LoginBmi", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Consult a specialist", "ConsultSpecialist", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Nearby Hospitals", "NearbyHospital", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Nearby Clinics", "NearbyClinic", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Need Help?", "NeedHelp", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Settings", "Settings?", "Home", new { area = "" }, new { @class = "side-nav-items" })
+    </div>
+
+    <script>
+        function openNav() { 
+            document.getElementById("sideNav").style.width = "250px";
+            document.getElementById("sideNav").style.height = "1015px";
+            let positioButton = document.getElementById("sideNav").style.position = "absolute";
+            document.body.style.backgroundColor = "#9d9d9d";
+            if (positioButton === "absolute") {
+                document.getElementById("sideNav").style.marginTop = "150px";
+            }
+            
+        }
+
+        function closeNav() {
+            document.getElementById("sideNav").style.width = "0";
+            document.getElementById("sideNav").style.height = "0";
+            document.body.style.backgroundColor = "white";
+        }
+        let selfButton = document.getElementById('selftest-item')
+        selfButton.addEventListener('click', () => {
+            alert('Error!Service Not Available ')
+        })
+    </script>
+
+</div>

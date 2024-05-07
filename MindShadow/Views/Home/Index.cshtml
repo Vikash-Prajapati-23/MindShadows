@@ -1,0 +1,317 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<main>
+
+    <p class="text-item">
+        "Mind Shadows is a revolutionary platform that is designed to help people identify their own mental health issues and get support. <br />
+        Thanks to a user-friendly interface, users can use self-testing tools and surveys to specifically assess their mental health.<br />
+        This platform provides personalized advice and connects users to mental health services, self-care tips, <br />and professional
+        training when needed. This platform also provides a community <br />where regular blogs are posted to keep users aware of mental health."
+    </p>
+    <section class="row" aria-labelledby="aspnetTitle">
+        <div id="carouselExampleAutoplaying" class="carousel slide " data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="~/Content/img/MS7.jpeg" class="d-block w-100 slide-img-item" alt="...">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size: 40px; color: #f016b6; font-weight: bold; font-style: oblique; font-weight:bold ">Welcome To The MindShadows</h5>
+                        <p style="font-size:30px;color:white;font-weight:bold; font-style:oblique;">"Your Happiness is Essential"</p>
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/img/MS11.jpg" class="d-block w-100 slide-img-item " alt="ggggg">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size: 40px; color: black; font-weight: bold; font-style: oblique ">
+                        "THERE ARE WOUNDS THAT NEVER SHOW ON THE BODY THAT ARE DEEPER AND MORE HURTFUL THAN ANYTHING THAT BLEEDS"
+                        </h5>
+                        
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/img/MS8.jpeg" class="d-block w-100 slide-img-item" alt="...">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size:40px; color:black; font-weight:bold; font-style:oblique">
+                        "REMEMBER THAT YOUR MENTAL HEALTH IS PRIORITY, YOUR INNER PEACE IS ESSENTIAL AND YOUR SELF CARE IS NECESSITY"
+                        </h5>
+                        
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/img/MS13.jpeg"  class="d-block w-100 slide-img-item" alt="...">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size:40px; color:black; font-weight:bold; font-style:oblique">
+                        "DAILY MEDITATION IS THE ANTIDOTE TO WORRIES ,STRESS AND NONSTOP THINKING WHICH DISTURB FOCUS AND TRANQUILITY AND WASTE MENTAL ENERGY"
+                        </h5>
+                        
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/img/MS12.jpg" class="d-block w-100 slide-img-item" alt="...">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size:40px; color:black; font-weight:bold; font-style:oblique">
+                        "TO KEEP THE BODY IN GOOD HEALTH IS A DUTY OTHERWISE WE SHALL NOT BE ABLE TO KEEP OUR MIND STRONG AND CLEAR"
+                        </h5>
+                        
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <img src="~/Content/img/MS14.jpg" class="d-block w-100 slide-img-item" alt="...">
+
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 style="font-size:40px; color:black; font-weight:bold; font-style:oblique">
+                        "YOGA IS ESSENTIALLY A PRACTICE FOR YOUR SOUL, WORKING THROUGH THE MEDIUM OF YOUR BODY"
+                        </h5>
+                        
+                    </div>
+
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container mt-3">
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <i class="fa-solid fa-user-doctor fs-1"></i>
+                    <h3>@Html.ActionLink("Consult a Specialist", "Index", "Home", new {area="" }, new {@class="text-decoration-none, text-reset ", @id="consult-item"}) </h3>
+                    <script>
+                        let clickBtn = document.getElementById('consult-item')
+                        clickBtn.addEventListener('click', () => {
+                            alert("for consult a specialist ...Please Register at First, If you have already register then  login to consult a Specialist.Thank You")
+                        })
+                    </script>
+                    <span class="text-item">
+                        "Users can seamlessly connect with a diverse 
+                        network of mental health professionals
+                        including psychiatrists, therapists, and 
+                        psychologists. Through our platform, this 
+                        connection is facilitated efficiently, 
+                        guaranteeing users receive prompt, personalized 
+                        support."
+                    </span>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fa-solid fa-heart-pulse fs-1"></i>
+                    <h3>@Html.ActionLink("Mental Health Tips", "MentalTips", "Home", new {area=" " }, new {@class="text-decoration-none, text-reset"})</h3>
+                    <span class="text-item">
+                        "An array of self-care holistic practices like yoga,
+                        art therapy,  journaling, binaural music,
+                        nutritional guidance, etc. By incorporating 
+                        these strategies into their daily routines, 
+                        users can effectively manage their mental health, 
+                        ultimately improving their overall health and 
+                        fostering a sense of balance and resilience."
+                    </span>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fa-solid fa-notes-medical fs-1"></i>
+                    <h3>@Html.ActionLink("Take Self-Assessment Tests", "Index", "Home", new { area = "" }, new { @class = "text-decoration-none, text-reset ", @id = "self-assessment-item" }) </h3>
+                    <script>
+                        let clickBtn2 = document.getElementById('self-assessment-item')
+                        clickBtn2.addEventListener('click', () => {
+                            alert("for Take a Self-Assessment Test ...Please Register at First, If you have already register then  login to Take a Self Assesest. Thank You")
+                        })
+                    </script>
+                    <span class="text-item">
+                        "Take a self-assessment test backed by research
+                        to identify mental well-being. Through these
+                        tests, individuals can promptly recognize
+                        their mental health status and take necessary
+                        actions for improvement."
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="d-flex flex-row mb-3 mt-3">
+            <div class="p-2 info-contain">
+                <h3 style="text-align:center;
+                    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    ">
+                    Redefining Normalcy in Mental Health
+                </h3>
+                <center>
+                    <img class="img-fluid " style="width:350px;height:180px; border-radius:10px;box-shadow:0px 0px 10px 0px" src="~/Content/img/ment1.jpg" />
+                </center>
+                <p style="text-align:justify;">
+                    It can be tough… but you’re not alone!
+
+                    Let's redefine normalcy, celebrating diversity and
+                    individuality while respecting each person's
+                    journey to mental well-being.
+                    In a world of diverse experiences,
+                    the concept of "normal" is subjective.
+                    Society's standards evolve, and what's
+                    considered unconventional today may be
+                    celebrated tomorrow. Embracing our quirks
+                    is vital, as they define our uniqueness.
+                    However, if any trait poses a threat or
+                    disrupts life, seeking help is crucial.
+                    Self-acceptance and appreciation of
+                    differences foster a more inclusive society.
+                    However, if any trait poses a threat or
+                    disrupts life, seeking help is crucial.
+                    Self-acceptance and appreciation of
+                    differences foster a more inclusive society.
+                </p>
+            </div>
+            <div class="p-2 info-contain3">
+                <h3 style="text-align: center;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    ">
+                    Empowering Indian Youth's Mental Health
+                </h3>
+                <center>
+                    <img class="img-fluid" style="width:350px;height:180px; border-radius:10px;box-shadow:0px 0px 10px 0px" src="~/Content/img/ment2.jpg" />
+                </center>
+                <p style="text-align:justify;">
+                    In many Indian households, discussions about mental
+                    health are often brushed aside or overlooked,
+                    particularly among parents who may not fully
+                    understand its importance. This trend is especially
+                    prevalent among Indian youth, who may find themselves
+                    in a challenging position when it comes to seeking support.
+                    Many are under 18 years old or lack financial independence,
+                    making it necessary to rely on their parents or guardians for assistance.
+
+                    Our platform addresses this critical gap by providing a
+                    safe and supportive space to openly discuss their
+                    mental health concerns. Here, they can find
+                    understanding and acceptance, free from judgment
+                    or shame. Additionally, our platform offers
+                    expert guidance and resources tailored to
+                    the unique challenges faced by Indian youth,
+                    empowering them to navigate their mental
+                    health journeys with confidence.</p>
+            </div>
+
+        </div>
+
+
+        <div class="d-flex ">
+            <div class="p-2 info-contain5">
+                <h3> Unveiling Unspoken Mental Health Topics for Young Adults</h3>
+               <center>
+                   <img style="border-radius:10px" class="img-fluid info-img" src="~/Content/img/ment3.jpg" />
+               </center>
+                
+                <p>
+                    By shedding light on unspoken topics yet very common, 
+                    we aim to foster understanding and support for young 
+                    adults navigating their mental health journeys.
+                    Generalized anxiety disorder and hyper-independence can
+                    hinder daily functioning and overall well-being.
+                    Self-harm, a prevalent yet overlooked coping mechanism, 
+                    alleviates emotional pain for many young adults. 
+                    Intrusive thoughts, persistent and distressing, 
+                    disrupt lives with unwanted sensations.
+                    Depression's stigma and the common phenomenon 
+                    of masking further complicate matters.
+                </p>
+            </div>
+            <div class="p-2 info-contain7 ">
+                <h3>Stay Informed</h3>
+                <center>
+                    <img class="img-fluid" style="width:450px;height:250px;border-radius:10px;" src="~/Content/img/ment4.jpg" />
+                </center>
+                <p>
+                    Your Guide to Mental Well-Being and Self-Improvement
+                    Whether you're seeking self-improvement strategies or
+                    want to stay informed about mental health trends, our 
+                    blog is your go-to resource for holistic well-being.
+                    Prioritize your mental and physical health journey
+                    with our comprehensive and insightful content
+                    Learn effective stress management techniques, 
+                    mindfulness practices, and resilience-building 
+                    exercises to enhance mental health. Discover the 
+                    importance of proper nutrition and supplements 
+                    for overall vitality. Empower yourself with expert 
+                    advice and practical tips to thrive mentally and 
+                    emotionally.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mt-3">
+            <div class="row text-center">
+                <div class="col-sm-4">
+                    <i class="fa-solid fa-users fs-1"></i>
+                    <h3>@Html.ActionLink("Lived Experience", "LivedExperience", "Home", new { area = " " }, new { @class = "text-decoration-none, text-reset" })</h3>
+                    <span class="text-item">
+                        "Take a glimpse into the lives of individuals
+                        with mental illness their challenges,
+                        victories, and journeys to overcome adversity.
+                        By sharing their experiences, we aim to
+                        create a sense of solidarity and comfort
+                        among readers, reassuring them that they
+                        are not alone in their struggles."
+                    </span>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fa-solid fa-comment-dots fs-1"></i>
+                    @*<h3>@Html.ActionLink("Join The Community", "About", "Home", new { area = " " }, new { @class = "text-decoration-none, text-reset" })</h3>*@
+                    <a class="text-reset" target="_blank" href="https://t.me/+e8nqDITsbzMwNGJl"><h3>Join The Community</h3></a>
+                    <span class="text-item">
+                        "This platform fosters a compassionate community,
+                        providing a welcoming space for users to connect and
+                        engage. Through shared experiences and open
+                        conversations, individuals find support and
+                        encouragement, building meaningful connections
+                        that contribute to their mental well-being."
+                    </span>
+                </div>
+                <div class="col-sm-4">
+                    <i class="fa-solid fa-star fs-1"></i>
+                    <h3>@Html.ActionLink("Send FeedBack", "Feedback", "User", new { area = " " }, new { @class = "text-decoration-none, text-reset" })</h3>
+                    <span class="text-item">
+                        "User reviews on mental health resources,
+                        therapies, and services offer valuable
+                        insights and recommendations. They
+                        contribute to a supportive community,
+                        aiding others in making informed decisions
+                        about their mental health journey."
+                    </span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</main>

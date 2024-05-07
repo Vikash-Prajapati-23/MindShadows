@@ -1,0 +1,130 @@
+﻿body {
+    background-color: #f7c3e9;
+    
+}
+.container-item {
+    background-color: #d5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img-item{
+    margin:0px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:bold;
+    border-radius:10px;
+    padding:2px;
+    box-shadow:0px 0px 8px 0px ;
+    
+}
+.img-item1 {
+    margin: 0px;
+    padding: 2px;
+    box-shadow: 0px 0px 12px 0px;
+    margin-left:5px;
+    margin-top:5px;
+    margin-bottom:5px;
+    border-radius:50%;
+    
+}
+.slide-img-item {
+    height: 400px;  
+    border-radius: 15px;
+
+}
+.text-item{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:15px;
+    width:90%;
+    margin:auto;
+    text-align:center;
+   
+}
+.foot-item {
+    height: 30px;
+    background-color: #eb6960;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: bold;
+}
+
+.info-contain{
+    width:45%;
+    height: 430px;
+    background-color:lightgray;
+    border-radius:20px;
+    box-shadow:0px 0px 10px 0px brown;
+}
+.info-contain2 {
+    width: 50%;
+    height: 400px;
+    background-color: lightgray;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px brown;   
+}
+.info-contain3{
+    width:55%;
+    margin-bottom:0px;
+}
+.info-contain5{
+    text-align:center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    width:45%;
+}
+.info-contain7 {
+    text-align:center;
+    width: 55% ;
+    height: 500px;
+    background-color: lightgray;
+    border-radius:20px;
+    box-shadow: 0px 0px 10px 0px brown;
+}
+info-img {
+    border-radius: 10px;
+    width: 90%;
+    
+}
+.fcon {
+    border-radius: 50%;
+    padding: 5px;
+    border-top: 2px solid red;
+    border-bottom: 2px solid blue;
+}
+.bmi-item3{
+    margin-top:5px;
+    text-align:justify-all;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:18px;
+}
+.bmi-item4{
+    text-align:justify;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:18px;
+}
+table,th,td{
+    border:1px solid black;
+    border-collapse:collapse;
+    padding:5px;
+    margin:auto;
+}
+th{
+    background-color:royalblue;
+}
+.tb-item1::before {
+    content: '\003C'
+}
+.tb-item2::before{
+    content:'\003C'
+}
+.tb-item3::before {
+    content: '\003E'
+}
+.tb-item4::before {
+    content: '\003E'
+}
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+﻿*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+}
+
+#Log-form{
+   
+    margin:auto;
+    width:90%;
+    border: 2px solid purple;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 8px 0 grey;
+    
+}
+
+.Log-Head {
+    text-align: center;
+}
+.Log-reg {
+    text-decoration: none;
+    color: red;
+    font-size: 13px;
+    text-align: center;
+}
+.Bhome{
+    color:black;
+}
+.Bhome1 {
+    color: #f2440f;
+    text-align: end;
+    font-weight: bold
+}
+

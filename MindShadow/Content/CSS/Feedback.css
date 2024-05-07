@@ -1,0 +1,29 @@
+﻿.feedback-item {
+    margin-top: 1px;
+    text-align: center;
+    width: 40%;
+    background-color: #34eb71;
+    border-radius: 10px;
+}
+.feedback-item-1 {
+    text-align: center;
+    margin-top: 3px;
+    background-color: #eb34c6;
+    border-radius: 15px;
+    height: auto;
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+    box-shadow:0px 0px 10px 0px;
+}
+.feedback-item-2{
+    width:40%;
+    border-radius:25px;
+}
+.feedback-item-3{
+    font-size:20px;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-style:oblique;
+    font-weight:bold;
+}

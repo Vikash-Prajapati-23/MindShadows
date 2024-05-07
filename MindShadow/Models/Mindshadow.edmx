@@ -1,0 +1,682 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MindShadowModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Admin_id" />
+          </Key>
+          <Property Name="Admin_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Phone_No" Type="nchar" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Password" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="BMI">
+          <Key>
+            <PropertyRef Name="Mobile_No" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile_No" Type="nvarchar" MaxLength="10" Nullable="false" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Weight" Type="int" />
+          <Property Name="Height" Type="int" />
+          <Property Name="BMI" Type="nchar" MaxLength="10" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clinic">
+          <Key>
+            <PropertyRef Name="Clinic_id" />
+          </Key>
+          <Property Name="First_Name" Type="nchar" MaxLength="10" />
+          <Property Name="Last_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Father_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="50" />
+          <Property Name="Religion" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="Pincode" Type="nchar" MaxLength="10" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Last_qualifying_exam" Type="nvarchar(max)" />
+          <Property Name="Board_name" Type="nvarchar(max)" />
+          <Property Name="Passing_year" Type="int" />
+          <Property Name="Marks_obtain" Type="int" />
+          <Property Name="Marks_upload" Type="xml" />
+          <Property Name="Marks_upload1" Type="image" />
+          <Property Name="_10th_passing_year" Type="int" />
+          <Property Name="_10th_marks_obtain" Type="int" />
+          <Property Name="_10th_marksheet_upload" Type="xml" />
+          <Property Name="_10th_marksheet_upload1" Type="image" />
+          <Property Name="_12th_passing_year" Type="int" />
+          <Property Name="_12th_marks_obtain" Type="int" />
+          <Property Name="_12th_marksheet_upload" Type="xml" />
+          <Property Name="_12th_matksheet_upload1" Type="image" />
+          <Property Name="Experience" Type="int" />
+          <Property Name="Clinic_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="First_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Last_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Mobile" Type="nchar" MaxLength="10" />
+          <Property Name="Description" Type="nvarchar" MaxLength="300" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Diagonost">
+          <Key>
+            <PropertyRef Name="Diagonost_id" />
+          </Key>
+          <Property Name="First_Name" Type="nchar" MaxLength="10" />
+          <Property Name="Last_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Father_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="50" />
+          <Property Name="Religion" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="Pincode" Type="nchar" MaxLength="10" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Last_qualifying_exam" Type="nvarchar(max)" />
+          <Property Name="Board_name" Type="nvarchar(max)" />
+          <Property Name="Passing_year" Type="int" />
+          <Property Name="Marks_obtain" Type="int" />
+          <Property Name="Marks_upload" Type="xml" />
+          <Property Name="Marks_upload1" Type="image" />
+          <Property Name="_10th_passing_year" Type="int" />
+          <Property Name="_10th_marks_obtain" Type="int" />
+          <Property Name="_10th_marksheet_upload" Type="xml" />
+          <Property Name="_10th_marksheet_upload1" Type="image" />
+          <Property Name="_12th_passing_year" Type="int" />
+          <Property Name="_12th_marks_obtain" Type="int" />
+          <Property Name="_12th_marksheet_upload" Type="xml" />
+          <Property Name="_12th_matksheet_upload1" Type="image" />
+          <Property Name="Experience" Type="int" />
+          <Property Name="Diagonost_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Doctor">
+          <Key>
+            <PropertyRef Name="Doctor_id" />
+          </Key>
+          <Property Name="First_Name" Type="nchar" MaxLength="10" />
+          <Property Name="Last_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Father_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Sex" Type="nvarchar" MaxLength="50" />
+          <Property Name="Religion" Type="nvarchar(max)" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="Pincode" Type="nchar" MaxLength="10" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="Last_qualifying_exam" Type="nvarchar(max)" />
+          <Property Name="Board_name" Type="nvarchar(max)" />
+          <Property Name="Passing_year" Type="int" />
+          <Property Name="Marks_obtain" Type="int" />
+          <Property Name="Marks_upload" Type="xml" />
+          <Property Name="Marks_upload1" Type="image" />
+          <Property Name="_10th_passing_year" Type="int" />
+          <Property Name="_10th_marks_obtain" Type="int" />
+          <Property Name="_10th_marksheet_upload" Type="xml" />
+          <Property Name="_10th_marksheet_upload1" Type="image" />
+          <Property Name="_12th_passing_year" Type="int" />
+          <Property Name="_12th_marks_obtain" Type="int" />
+          <Property Name="_12th_marksheet_upload" Type="xml" />
+          <Property Name="_12th_matksheet_upload1" Type="image" />
+          <Property Name="Experience" Type="int" />
+          <Property Name="Doctor_id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Add_features" Type="nvarchar(max)" />
+          <Property Name="Rating" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Gardian">
+          <Key>
+            <PropertyRef Name="Gardian_Id" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Phone_No" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Relation" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar" MaxLength="50" />
+          <Property Name="City" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pincode" Type="nvarchar" MaxLength="10" />
+          <Property Name="Patient_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Patient_DOB" Type="date" />
+          <Property Name="Patient_Age" Type="int" />
+          <Property Name="Patient_Gender" Type="nvarchar" MaxLength="50" />
+          <Property Name="Patient_Address" Type="nvarchar(max)" />
+          <Property Name="Patient_Phone_No" Type="nvarchar" MaxLength="10" />
+          <Property Name="Gardian_Id" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Help">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Problem" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Reviews">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nchar" MaxLength="10" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="First_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Last_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="Fathers_Name" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOB" Type="date" />
+          <Property Name="Gender" Type="nvarchar(max)" />
+          <Property Name="Mobile_Number" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
+          <Property Name="State" Type="nvarchar(max)" />
+          <Property Name="City" Type="nvarchar(max)" />
+          <Property Name="Pincode" Type="nvarchar" MaxLength="10" />
+          <Property Name="User_ID" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="Password" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="MindShadowModelStoreContainer">
+          <EntitySet Name="Admin" EntityType="Self.Admin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="BMI" EntityType="Self.BMI" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Clinic" EntityType="Self.Clinic" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Contact" EntityType="Self.Contact" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Diagonost" EntityType="Self.Diagonost" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Doctor" EntityType="Self.Doctor" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Feedback" EntityType="Self.Feedback" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Gardian" EntityType="Self.Gardian" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Help" EntityType="Self.Help" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Reviews" EntityType="Self.Reviews" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MindShadowModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="Admin_id" />
+          </Key>
+          <Property Name="Admin_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Phone_No" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="BMI">
+          <Key>
+            <PropertyRef Name="Mobile_No" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Weight" Type="Int32" />
+          <Property Name="Height" Type="Int32" />
+          <Property Name="BMI1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Clinic">
+          <Key>
+            <PropertyRef Name="Clinic_id" />
+          </Key>
+          <Property Name="First_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Religion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Last_qualifying_exam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Board_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Passing_year" Type="Int32" />
+          <Property Name="Marks_obtain" Type="Int32" />
+          <Property Name="Marks_upload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Marks_upload1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="C_10th_passing_year" Type="Int32" />
+          <Property Name="C_10th_marks_obtain" Type="Int32" />
+          <Property Name="C_10th_marksheet_upload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="C_10th_marksheet_upload1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="C_12th_passing_year" Type="Int32" />
+          <Property Name="C_12th_marks_obtain" Type="Int32" />
+          <Property Name="C_12th_marksheet_upload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="C_12th_matksheet_upload1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Experience" Type="Int32" />
+          <Property Name="Clinic_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Contact">
+          <Key>
+            <PropertyRef Name="Description" />
+          </Key>
+          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Diagonost">
+          <Key>
+            <PropertyRef Name="Diagonost_id" />
+          </Key>
+          <Property Name="First_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Religion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Last_qualifying_exam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Board_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Passing_year" Type="Int32" />
+          <Property Name="Marks_obtain" Type="Int32" />
+          <Property Name="Marks_upload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Marks_upload1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="C_10th_passing_year" Type="Int32" />
+          <Property Name="C_10th_marks_obtain" Type="Int32" />
+          <Property Name="C_10th_marksheet_upload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="C_10th_marksheet_upload1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="C_12th_passing_year" Type="Int32" />
+          <Property Name="C_12th_marks_obtain" Type="Int32" />
+          <Property Name="C_12th_marksheet_upload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="C_12th_matksheet_upload1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Experience" Type="Int32" />
+          <Property Name="Diagonost_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Doctor">
+          <Key>
+            <PropertyRef Name="Doctor_id" />
+          </Key>
+          <Property Name="First_Name" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Father_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Sex" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Religion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Last_qualifying_exam" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Board_name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Passing_year" Type="Int32" />
+          <Property Name="Marks_obtain" Type="Int32" />
+          <Property Name="Marks_upload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Marks_upload1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="C_10th_passing_year" Type="Int32" />
+          <Property Name="C_10th_marks_obtain" Type="Int32" />
+          <Property Name="C_10th_marksheet_upload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="C_10th_marksheet_upload1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="C_12th_passing_year" Type="Int32" />
+          <Property Name="C_12th_marks_obtain" Type="Int32" />
+          <Property Name="C_12th_marksheet_upload" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="C_12th_matksheet_upload1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="Experience" Type="Int32" />
+          <Property Name="Doctor_id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Feedback">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Add_features" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Rating" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Gardian">
+          <Key>
+            <PropertyRef Name="Gardian_Id" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Phone_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Relation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Patient_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Patient_DOB" Type="DateTime" Precision="0" />
+          <Property Name="Patient_Age" Type="Int32" />
+          <Property Name="Patient_Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Patient_Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Patient_Phone_No" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Gardian_Id" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Help">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Problem" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Last_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Fathers_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="DateTime" Precision="0" />
+          <Property Name="Gender" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile_Number" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="State" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="City" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Pincode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="User_ID" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="MindShadowEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="BMIs" EntityType="Self.BMI" />
+          <EntitySet Name="Clinics" EntityType="Self.Clinic" />
+          <EntitySet Name="Contacts" EntityType="Self.Contact" />
+          <EntitySet Name="Diagonosts" EntityType="Self.Diagonost" />
+          <EntitySet Name="Doctors" EntityType="Self.Doctor" />
+          <EntitySet Name="Feedbacks" EntityType="Self.Feedback" />
+          <EntitySet Name="Gardians" EntityType="Self.Gardian" />
+          <EntitySet Name="Helps" EntityType="Self.Help" />
+          <EntitySet Name="Reviews" EntityType="Self.Review" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MindShadowModelStoreContainer" CdmEntityContainer="MindShadowEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="MindShadowModel.Admin">
+              <MappingFragment StoreEntitySet="Admin">
+                <ScalarProperty Name="Admin_id" ColumnName="Admin_id" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="BMIs">
+            <EntityTypeMapping TypeName="MindShadowModel.BMI">
+              <MappingFragment StoreEntitySet="BMI">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Weight" ColumnName="Weight" />
+                <ScalarProperty Name="Height" ColumnName="Height" />
+                <ScalarProperty Name="BMI1" ColumnName="BMI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Clinics">
+            <EntityTypeMapping TypeName="MindShadowModel.Clinic">
+              <MappingFragment StoreEntitySet="Clinic">
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Last_qualifying_exam" ColumnName="Last_qualifying_exam" />
+                <ScalarProperty Name="Board_name" ColumnName="Board_name" />
+                <ScalarProperty Name="Passing_year" ColumnName="Passing_year" />
+                <ScalarProperty Name="Marks_obtain" ColumnName="Marks_obtain" />
+                <ScalarProperty Name="Marks_upload" ColumnName="Marks_upload" />
+                <ScalarProperty Name="Marks_upload1" ColumnName="Marks_upload1" />
+                <ScalarProperty Name="C_10th_passing_year" ColumnName="_10th_passing_year" />
+                <ScalarProperty Name="C_10th_marks_obtain" ColumnName="_10th_marks_obtain" />
+                <ScalarProperty Name="C_10th_marksheet_upload" ColumnName="_10th_marksheet_upload" />
+                <ScalarProperty Name="C_10th_marksheet_upload1" ColumnName="_10th_marksheet_upload1" />
+                <ScalarProperty Name="C_12th_passing_year" ColumnName="_12th_passing_year" />
+                <ScalarProperty Name="C_12th_marks_obtain" ColumnName="_12th_marks_obtain" />
+                <ScalarProperty Name="C_12th_marksheet_upload" ColumnName="_12th_marksheet_upload" />
+                <ScalarProperty Name="C_12th_matksheet_upload1" ColumnName="_12th_matksheet_upload1" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Clinic_id" ColumnName="Clinic_id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Contacts">
+            <EntityTypeMapping TypeName="MindShadowModel.Contact">
+              <MappingFragment StoreEntitySet="Contact">
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Diagonosts">
+            <EntityTypeMapping TypeName="MindShadowModel.Diagonost">
+              <MappingFragment StoreEntitySet="Diagonost">
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Last_qualifying_exam" ColumnName="Last_qualifying_exam" />
+                <ScalarProperty Name="Board_name" ColumnName="Board_name" />
+                <ScalarProperty Name="Passing_year" ColumnName="Passing_year" />
+                <ScalarProperty Name="Marks_obtain" ColumnName="Marks_obtain" />
+                <ScalarProperty Name="Marks_upload" ColumnName="Marks_upload" />
+                <ScalarProperty Name="Marks_upload1" ColumnName="Marks_upload1" />
+                <ScalarProperty Name="C_10th_passing_year" ColumnName="_10th_passing_year" />
+                <ScalarProperty Name="C_10th_marks_obtain" ColumnName="_10th_marks_obtain" />
+                <ScalarProperty Name="C_10th_marksheet_upload" ColumnName="_10th_marksheet_upload" />
+                <ScalarProperty Name="C_10th_marksheet_upload1" ColumnName="_10th_marksheet_upload1" />
+                <ScalarProperty Name="C_12th_passing_year" ColumnName="_12th_passing_year" />
+                <ScalarProperty Name="C_12th_marks_obtain" ColumnName="_12th_marks_obtain" />
+                <ScalarProperty Name="C_12th_marksheet_upload" ColumnName="_12th_marksheet_upload" />
+                <ScalarProperty Name="C_12th_matksheet_upload1" ColumnName="_12th_matksheet_upload1" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Diagonost_id" ColumnName="Diagonost_id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Doctors">
+            <EntityTypeMapping TypeName="MindShadowModel.Doctor">
+              <MappingFragment StoreEntitySet="Doctor">
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Father_Name" ColumnName="Father_Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Sex" ColumnName="Sex" />
+                <ScalarProperty Name="Religion" ColumnName="Religion" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Last_qualifying_exam" ColumnName="Last_qualifying_exam" />
+                <ScalarProperty Name="Board_name" ColumnName="Board_name" />
+                <ScalarProperty Name="Passing_year" ColumnName="Passing_year" />
+                <ScalarProperty Name="Marks_obtain" ColumnName="Marks_obtain" />
+                <ScalarProperty Name="Marks_upload" ColumnName="Marks_upload" />
+                <ScalarProperty Name="Marks_upload1" ColumnName="Marks_upload1" />
+                <ScalarProperty Name="C_10th_passing_year" ColumnName="_10th_passing_year" />
+                <ScalarProperty Name="C_10th_marks_obtain" ColumnName="_10th_marks_obtain" />
+                <ScalarProperty Name="C_10th_marksheet_upload" ColumnName="_10th_marksheet_upload" />
+                <ScalarProperty Name="C_10th_marksheet_upload1" ColumnName="_10th_marksheet_upload1" />
+                <ScalarProperty Name="C_12th_passing_year" ColumnName="_12th_passing_year" />
+                <ScalarProperty Name="C_12th_marks_obtain" ColumnName="_12th_marks_obtain" />
+                <ScalarProperty Name="C_12th_marksheet_upload" ColumnName="_12th_marksheet_upload" />
+                <ScalarProperty Name="C_12th_matksheet_upload1" ColumnName="_12th_matksheet_upload1" />
+                <ScalarProperty Name="Experience" ColumnName="Experience" />
+                <ScalarProperty Name="Doctor_id" ColumnName="Doctor_id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Feedbacks">
+            <EntityTypeMapping TypeName="MindShadowModel.Feedback">
+              <MappingFragment StoreEntitySet="Feedback">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Add_features" ColumnName="Add_features" />
+                <ScalarProperty Name="Rating" ColumnName="Rating" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Gardians">
+            <EntityTypeMapping TypeName="MindShadowModel.Gardian">
+              <MappingFragment StoreEntitySet="Gardian">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Phone_No" ColumnName="Phone_No" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Relation" ColumnName="Relation" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="Patient_Name" ColumnName="Patient_Name" />
+                <ScalarProperty Name="Patient_DOB" ColumnName="Patient_DOB" />
+                <ScalarProperty Name="Patient_Age" ColumnName="Patient_Age" />
+                <ScalarProperty Name="Patient_Gender" ColumnName="Patient_Gender" />
+                <ScalarProperty Name="Patient_Address" ColumnName="Patient_Address" />
+                <ScalarProperty Name="Patient_Phone_No" ColumnName="Patient_Phone_No" />
+                <ScalarProperty Name="Gardian_Id" ColumnName="Gardian_Id" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Helps">
+            <EntityTypeMapping TypeName="MindShadowModel.Help">
+              <MappingFragment StoreEntitySet="Help">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Problem" ColumnName="Problem" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reviews">
+            <EntityTypeMapping TypeName="MindShadowModel.Review">
+              <MappingFragment StoreEntitySet="Reviews">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MindShadowModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="Last_Name" ColumnName="Last_Name" />
+                <ScalarProperty Name="Fathers_Name" ColumnName="Fathers_Name" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Gender" ColumnName="Gender" />
+                <ScalarProperty Name="Mobile_Number" ColumnName="Mobile_Number" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Pincode" ColumnName="Pincode" />
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

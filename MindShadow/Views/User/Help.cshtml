@@ -1,0 +1,39 @@
+﻿@model MindShadow.Models.Help
+
+@{
+    ViewBag.Title = "Help";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container m-auto text-center mt-2 help-item-1">
+        <h4>We are always with you to solve your prolem. please send your problem without feeling any hesitate.Thank You!</h4>
+    </div>
+
+    <div class="container help-item">
+        <div class="row mt-2 mx-1">
+            <label>Name</label>
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "your full name" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+        <div class="row mt-2 mx-1">
+            <label>Email</label>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "example@gmail.com" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+        <div class="row mt-2 mx-1 ">
+            <label>Problem Description[Within 300 Words]</label>
+            @Html.TextAreaFor(model => model.Problem, 8, 30, new { htmlAttributes = new { }, @class = "form-control", @PlaceHolder = "Write Your Query in deatils within 300 words" })
+            @Html.ValidationMessageFor(model => model.Problem, "", new { @class = "text-danger" })
+        </div>
+
+        <button class="btn btn-success mt-2 mb-2 w-25 " type="submit">Submit</button>
+        <div class="text-start">
+            @Html.ActionLink("<<Back to Home>>", "Index", "Home", new { area = "" }, new { @class = "text-decoration-none " })
+        </div>
+    </div>
+
+}
+    

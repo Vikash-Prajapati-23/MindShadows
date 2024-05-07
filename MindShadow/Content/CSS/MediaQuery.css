@@ -1,0 +1,161 @@
+﻿
+/*for mobile device(portrait and landscape)*/
+@media only screen and (max-width:767px) {
+    .text-item{
+        font-size:10px;
+    }
+    .welcome2{
+        width:370px;
+    }
+    .welcome {
+        font-size:19px;
+        animation: lettershow 8s steps(80, end) infinite;
+    }
+    .info-contain{
+        height:670px
+    }
+    .info-contain7{
+        height:600px;
+    }
+    .adiv1{
+        width:300px;
+    }
+    .adiv2{
+        width:300px;
+    }
+    .adiv3{
+        width:130px;
+        height:50px;
+        font-size:12px;  
+    }
+    .adiv h1{
+        font-size:20px;
+        margin-bottom:0px;
+    }
+    .adiv{
+        font-size:10px;
+    }
+    .mm2 {
+         margin-left:50px;
+       
+    }
+    .mm3{
+        margin-left:60px;
+    }
+    .mm4{
+        width:70px;
+        margin-left:60px;
+        margin-top:5px;
+    }
+    .mm{        
+       margin-left:121px;
+       margin-top:5px;
+    }
+}
+/*for tablet device(portrait and landscap)*/
+@media only screen and (min-width:768px) and (max-width:1023px) {
+    .text-item {
+        font-size: 10px;
+    }
+    .welcome2 {
+        width: 370px;
+    }
+
+    .welcome {
+        font-size: 19px;
+        animation: lettershow 8s steps(80, end) infinite;
+    }
+    .info-contain {
+        height: 670px
+    }
+
+    .info-contain7 {
+        height: 600px;
+    }
+    .adiv1 {
+        width: 300px;
+    }
+
+    .adiv2 {
+        width: 300px;
+    }
+
+    .adiv3 {
+        width: 130px;
+        height: 50px;
+        font-size: 12px;
+    }
+
+    .adiv h1 {
+        font-size: 25px;
+        margin-bottom: 0px;
+    }
+
+    .adiv {
+        font-size: 12px;
+       
+    }
+    .mm2 {
+        margin-left: 50px;
+    }
+
+    .mm3 {
+        margin-left: 60px;
+    }
+
+    .mm4 {
+        width: 70px;
+        margin-left: 60px;
+        margin-top: 5px;
+    }
+
+    .mm {
+        margin-left: 121px;
+        margin-top: 5px;
+    }
+    .container-boxItem11{
+        width:500px;
+    }
+    
+}
+/*for Laptop device(portrait and landscap)*/
+@media only screen and (min-width:1024px) and (max-width:1439px) {
+    .text-item {
+        font-size: 14px;
+    }
+    .info-contain {
+        height: 500px;
+        
+    }
+
+    .info-contain7 {
+        height: 540px;
+    }
+    .adiv2 {
+       height:180px;
+    }
+    .adiv3 {
+        width: 200px;
+        height: 70px;
+        font-size: 18px;
+    }
+    .container-boxItem11 {
+        width: 850px;
+    }
+}
+/*for Desktop device(portrait and landscap)*/
+@media only screen and (min-width:1440px) {
+    .text-item {
+        font-size: 20px;
+    }
+    .info-contain {
+        height:500px
+    }
+
+    .info-contain7 {
+        height: 100vh;
+    }
+    .container-boxItem11 {
+        width: 830px;
+    }
+}

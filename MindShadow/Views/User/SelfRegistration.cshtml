@@ -1,0 +1,161 @@
+﻿@model MindShadow.Models.User
+
+@{
+    ViewBag.Title = "SelfRegistration";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+    <div style="width: 650px; border: 1px solid gray; background-color: #d1f0e6; border-radius:10px; margin-top:20px " class="container">
+        <div class="Bhome1">
+            @Html.ActionLink("already have account!Login here", "Login", "User", new { @class = " Bhome1" })
+        </div>
+
+        <div class="row">
+            <center>
+                <img class="mt-2" style="width:100px;" src="~/Content/img/user.png" />
+                <h3>Self Registration</h3>
+                <hr />
+            </center>
+        </div>
+
+        <div class="row">
+            <div class="col-6 mt-2">
+                <lebel class="form-label">Enter Your Name<span style="color:red">*</span> </lebel>
+                <!-- @Html.EditorFor(model => model.First_Name, new { htmlAttributes = new { @class = "form-control", PlaceHolder = Html.DisplayNameFor(m => m.First_Name) } })-->
+                @Html.EditorFor(model => model.First_Name, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "First Name" } })
+                @Html.ValidationMessageFor(model => model.First_Name, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-6 mt-2">
+                <lebel class="form-label">. </lebel>
+                @Html.EditorFor(model => model.Last_Name, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "Last Name" } })
+                @Html.ValidationMessageFor(model => model.Last_Name, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 mt-2">
+                <lebel class="form-label">Father's Name* </lebel>
+                @Html.EditorFor(model => model.Fathers_Name, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "father's Name" } })
+                @Html.ValidationMessageFor(model => model.Fathers_Name, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-6 mt-2">
+                <lebel class="form-label">Date of Birth<span style="color:red">*</span> </lebel>
+                @Html.EditorFor(model => model.DOB, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "DD-MM-YYYY" } })
+                @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 mt-2">
+                <lebel class="form-label">Mobile Number<span style="color:red">*</span> </lebel>
+                @Html.EditorFor(model => model.Mobile_Number, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "Phone Number" } })
+                @Html.ValidationMessageFor(model => model.Mobile_Number, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-6 mt-2">
+                <lebel class="form-label">Gender<span style="color:red">*</span> </lebel>
+
+                <select @Html.EditorFor(model => model.Gender, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })>
+                    <option>Choose Your Gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Others</option>
+                </select>
+
+            </div>
+        </div>
+        <div class="row mx-0 mt-2">
+            <lebel class="form-label">Email<span style="color:red">*</span> </lebel>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "Example12345@gmail.com" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="row mx-0 mt-2">
+            <lebel class="form-label">Address<span style="color:red">*</span> </lebel>
+            @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "Full Address" } })
+            @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="row">
+            <div class="col-4 mt-2">
+                <span>State<span style="color:red">*</span></span><br />
+                <select class="form-control"
+                        @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
+                        required>
+                    <option>Choose your state</option>
+                    <option>West Bengal</option>
+                    <option>Haryana</option>
+                    <option>Jharkhand</option>
+                    <option>Kerala</option>
+                    <option>Bihar</option>
+                    <option>Delhi</option>
+                    <option>Madhya Pradesh</option>
+                    <option>Maharashtra</option>
+                    <option>Karnataka</option>
+                </select>
+            </div>
+            <div class="col-4 mt-2">
+                <lebel class="form-label">City<span style="color:red">*</span> </lebel>
+                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "City" } })
+                @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-4 mt-2">
+                <lebel class="form-label">Pincode<span style="color:red">*</span> </lebel>
+                @Html.EditorFor(model => model.Pincode, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "Postal Address" } })
+                @Html.ValidationMessageFor(model => model.Pincode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <hr />
+        <div class="row">
+            <div class="col-6 mt-2">
+                <lebel class="form-label">User Id<span style="color:red">*</span> </lebel>
+                @Html.EditorFor(model => model.User_ID, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "Create Your user Id", @Type = "Password", @id = "userBtn1" } })
+                @Html.ValidationMessageFor(model => model.User_ID, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-6 mt-2">
+                <lebel class="form-label">Retype User Id<span style="color:red">*</span> </lebel>
+                <input id="userBtn2" type="text" class="form-control" placeholder=" Retype Your User Id" required />
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-6 mt-2">
+                <lebel class="form-label">Password<span style="color:red">*</span> </lebel>
+                @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "Create Your Password", @Type = "Password", @id = "passBtn1" } })
+                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+            </div>
+            <div class="col-6 mt-2">
+                <lebel class="form-label">Retype Password<span style="color:red">*</span> </lebel>
+                <input id="passBtn2" type="text" class="form-control" placeholder=" Retype Your Password" required />
+            </div>
+        </div>
+
+        <div class="form-check mt-2">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label" for="flexCheckDefault">
+                By accessing this website we assume you accept these terms and conditions. Do not continue to use SmartShopper.in if you do not agree to take all of the terms and conditions stated on this page.
+            </label>
+        </div>
+
+        <div class="d-grid gap-2 col-11 mx-auto mt-4 mb-2 col-md-offset-2">
+            <button id="submitBtn" class="btn btn-success" type="submit">SignUp</button>
+        </div>
+        <script src="~/Content/JavaScript/Custom.js"></script>
+
+        <div>
+            @Html.ActionLink("<<Back to Home>>", "Index", "Home", new { area = "" }, new { @class = "text-decoration-none Bhome" })
+        </div>
+    </div>
+
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+

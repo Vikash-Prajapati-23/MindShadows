@@ -1,0 +1,204 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindShadows</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script src="~/Content/FontAwosme/fontawesome-free-6.5.1-web/js/all.js"></script>
+    <link href="~/Content/FontAwosme/fontawesome-free-6.5.1-web/css/all.css" rel="stylesheet" />
+    <link href="~/Content/CSS/CustomCss.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Navbar.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Footer.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Login.css" rel="stylesheet" />
+    <link href="~/Content/CSS/BMI.css" rel="stylesheet" />
+    <link href="~/Content/CSS/About.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Mission_Vision.css" rel="stylesheet" />
+    <link href="~/Content/CSS/LivedExperience.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Dr_Registration.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Feedback.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Help.css" rel="stylesheet" />
+    <link href="~/Content/CSS/T&C.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Dashboard.css" rel="stylesheet" />
+    <link href="~/Content/CSS/Welcome.css" rel="stylesheet" />
+    <link href="~/Content/CSS/MediaQuery.css" rel="stylesheet" />
+    <link href="~/Content/CSS/ConsultASpecialist.css" rel="stylesheet" />
+    <link href="~/Content/CSS/chatbot.css" rel="stylesheet" />
+</head>
+<body>
+    <header>
+        <div class="container-item">
+            <div class="con-box">
+                <img  src="~/Content/img/Logo.png" alt="Logo" width="70" class="d-inline-block img-item1" />
+                <span class="img-item">MINDSHADOWS</span>
+            </div>
+            <div class="welcome2">
+                <h3 class="welcome">WELCOME TO MINDSHADOWS</h3>
+            </div>
+            
+            <div class="con-box">
+                <span class="navbar-brand mb-0 h1">
+                    <a href="https://twitter.com/MindShadow_team" target="_blank"><i style="color: #0dbab1; font-size: 25px" onmouseover="this.style.color='#32eddc'" onmouseout="this.style.color='#0dbab1'" class="fa-brands fa-twitter px-2 fcon"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61559288314624" target="_blank"><i style="color: #5872f5; font-size: 25px " onmouseover="this.style.color='#7a91eb'" onmouseout="this.style.color='#5872f5'" class="fa-brands fa-facebook icon-item px-2 fcon"></i></a>
+                    <a href="https://www.instagram.com/mindshadow_team/" target="_blank"><i style="color: #e60e6c; font-size: 25px " onmouseover="this.style.color='#f569ad'" onmouseout="this.style.color='#e60e6c'" class="fa-brands fa-instagram px-2 fcon"></i></a>
+                    <a href="https://www.youtube.com/channel/UCAKxCqYOmCQ6IZrFNPk7Rbw" target="_blank"><i style="color: #e60e24; font-size: 25px " onmouseover="this.style.color='#cf7879'" onmouseout="this.style.color='#e60e24'" class="fa-brands fa-youtube px-2 fcon"></i></a>
+                </span>
+
+            </div>
+
+
+        </div>
+    </header>
+
+    <nav id="navitem" class="navbar navbar-expand-sm navbar-expand-md navbar-toggleable-md navbar-toggleable-sm sticky-top">
+        <div class="container-fluid">
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="Nav" class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul id="nav-tools" class="navbar-nav flex-grow-1 justify-content-start">
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "fw-bold me-3 list-group-item" })</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "fw-bold me-3 list-group-item" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "User", new { area = "" }, new { @class = "fw-bold me-3 list-group-item" })</li>
+                    <li>@Html.ActionLink("Mission & Vision", "MissionVision", "Home", new { area = "" }, new { @class = "fw-bold me-3 list-group-item" })</li> 
+                    <li>@Html.ActionLink("Blogs", "Blogs", "Home", new { area = "" }, new { @class = "fw-bold me-3 list-group-item" })</li>
+                </ul>
+            </div>
+            <div id="Nav" class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1 justify-content-end">
+                    <li>
+                        <button id="drBtn" type="submit" class="btn nav-link fw-bold list-group-item">Registration</button>
+                        <ul class="drop-1 z-1 position-absolute">
+                            <li class="drop-1">@Html.ActionLink("Self Registration", "SelfRegistration", "User", new { area = "" }, new { @class = "text-black text-start fs-6 fw-semibold fst-italic text-decoration-none " })</li>
+                            <li class="drop-1">@Html.ActionLink("Doctor's Registration", "DrRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none " })</li>
+                            <li class="drop-1">@Html.ActionLink("Gardians registration", "GardianRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none " })</li>
+                            <li class="drop-1">@Html.ActionLink("Clinic Registration", "ClinicRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none " })</li>
+                            <li class="drop-1">@Html.ActionLink("Diagonostic Registration", "DiagonostRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none " })</li>
+
+                        </ul>
+
+                        <script src="~/Content/Javascript/DropDown.js"></script>
+                    </li>
+                    @if (Session["userLogin"] != null)
+                    {
+                        @Html.ActionLink("Dashboard", "Dashboard", "User", new { area = "" }, new { @class = "nav-link fw-bold list-group-item " })
+                        <li>
+                            <p style="color:white; font-weight: bold;">Hello @Session["userLogin"]</p>
+                        </li>
+                        <li>@Html.ActionLink("Logout", "Logout", "User", new { area = "" }, new { @class = "nav-link " })</li>
+                    }
+                    else
+                    {
+
+                        <li>@Html.ActionLink("Login", "Login", "User", new { area = "" }, new { @class = "nav-link fw-bold list-group-item" })</li>
+                        <li>@Html.ActionLink("BMI Calculator", "BMI", "Home", new { area = "" }, new { @class = "fw-bold list-group-item" })</li>
+                    }
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+    <div class=" container-fluid ">
+        @RenderBody()
+        <hr />
+        <footer>
+            <div style="background-color: #b85151; " class="row ">
+                
+                <div class="row contents">
+                    <div id=" content_5" class="col foot-items ">
+                        <div class="Foot-sec">
+                            <img src="~/Content/img/Logo.png" style="height:40px" />
+                            <h5 style="margin-top:11px">Mind Shadows</h5>
+                        </div>
+                        <p style="font-size:16px" class="foot-a">
+                            Designed and built with
+                            all the love in the
+                            world by the Mind Shadows
+                            team.
+                        </p>
+
+                    </div>
+                    <div id=" content_1" class="col">
+                        <h4>Usefull Links</h4>
+                        <ul class="foot-items flex-grow-2">
+                            @Html.ActionLink("About Us", "About", "Home", new { area = "" }, new { @class = "foot-a me-3 list-group-item" })
+                            @Html.ActionLink("Blog", "Blogs", "Home", new { area = "" }, new { @class = "foot-a me-3 list-group-item" })
+                            @Html.ActionLink("Mission & Vission", "MissionVision", "Home", new { area = "" }, new { @class = "foot-a me-3 list-group-item" })
+                            @Html.ActionLink("Contact US", "Contact", "User", new { area = "" }, new { @class = "foot-a me-3 list-group-item" })
+                        </ul>
+                    </div>
+                    <div id=" content_2" class="col">
+                        <h4>Our Services</h4>
+                        <ul class="foot-items flex-grow-2">
+                            <li>@Html.ActionLink("Consult a Doctor", "Index", "Home", new { area = "" }, new { @class = "foot-a", @id="consult-item-1"}) </li>
+                            <li>@Html.ActionLink("Near by Clinics", "Index", "Home", new { area = "" }, new { @class = "foot-a", @id = "consult-item-2" }) </li>
+                            <li>@Html.ActionLink("Near by Hospitals", "Index", "Home", new { area = "" }, new { @class = "foot-a", @id = "consult-item-3" }) </li>
+                            <li>@Html.ActionLink("Diagonostic Centre", "Index", "Home", new { area = "" }, new { @class = "foot-a", @id = "consult-item-4" }) </li>
+                            <li>@Html.ActionLink("AI Asistant", "Index", "Home", new { area = "" }, new { @class = "foot-a", @id = "consult-item-5" }) </li>
+                        </ul>
+                        <script>
+                            let conBtn = document.getElementById('consult-item-1')
+                            let conBtn2 = document.getElementById('consult-item-2')
+                            let conBtn3 = document.getElementById('consult-item-3')
+                            let conBtn4 = document.getElementById('consult-item-4')
+                            let conBtn5 = document.getElementById('consult-item-5')
+                            conBtn.addEventListener('click', () => {
+                                alert("for consult a specialist ...Please Register at First, If you have already register then  login to consult a Specialist.Thank You")
+                            })
+                            conBtn2.addEventListener('click', () => {
+                                alert("for show the nearby clinic ...Please Register at First, If you have already register then  login to get this service.Thank You!")
+                            })
+                            conBtn3.addEventListener('click', () => {
+                                alert("for show the nearby Hospitals ...Please Register at First, If you have already register then  login to get this service.Thank You!")
+                            })
+                            conBtn4.addEventListener('click', () => {
+                                alert("For availing this service ...Please Register your First, If you have already registered then login to get this service.Thank You!")
+                            })
+                            conBtn5.addEventListener('click', () => {
+                                alert("for get a self-asist through AI asistant ...Please Register at First, If you have already register then  login to get this service.Thank You!")
+                            })
+                        </script>
+                    </div>
+                    <div id=" content_3" class="col">
+                        <h4>More</h4>
+                        <ul class="foot-items flex-grow-2">
+                            <li class=" na">@Html.ActionLink("Help", "Help", "User", new { area = "" }, new { @class = "text-decoration-none, foot-a "}) </li>
+                            <li class=" na"> <a class="foot-a" href="#">NaN</a></li>
+                            <li class=" na">@Html.ActionLink("T&C", "Terms", "Home", new { area = "" }, new { @class = "text-decoration-none, foot-a " }) </li>
+                            <li class=" na"> <a class="foot-a" href="#">Developers</a></li>
+                        </ul>
+                    </div>
+                    <div id=" content_4" class="col foot-items ">
+                        <h4>Reach Us</h4>
+                        <p style="font-size:16px" class="foot-a">
+                            Banerjee para, Shanti
+                            sangha playground, kolkata,
+                            700154, IIT BORAL
+                        </p>
+                        <p class="my-1"><i style="color: black; font-size: 16px" class="fa-solid fa-phone"></i> +91 2255444400</p>
+                        <a href="#" class="foot-a"><i style="color: black; font-size: 16px" class="fa-solid fa-envelope"></i> mindshadows@gmail.com</a><br />
+                        <a href="https://www.youtube.com/channel/UCAKxCqYOmCQ6IZrFNPk7Rbw" target="_blank"><i style="color:red; font-size:30px;" class="fa-brands fa-youtube me-1"></i></a>
+                        <a href="#"><i style="color: blue; font-size: 30px" class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/mindshadow_team/" target="_blank"><i style="color: red; font-size: 30px" class="fa-brands fa-square-instagram mx-1"></i></a>
+                        <a href="https://twitter.com/MindShadow_team" target="_blank"><i style="color: blue; font-size: 30px" class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class=" row foot-item ">
+                <p>MindShadows &copy; @DateTime.Now.Year - All Rights Reserved</p>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
+ 

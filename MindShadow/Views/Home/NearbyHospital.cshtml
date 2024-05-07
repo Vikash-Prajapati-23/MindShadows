@@ -1,0 +1,114 @@
+﻿
+@{
+    ViewBag.Title = "NearbyHospital";
+}
+
+<div class="dashboard d-flex">
+    <i class="fa-solid fa-bars me-2 dashboard-burger-icon" onclick="openNav()"></i>
+    <h4 class="dashborad-snav ">Dashboard</h4>
+</div>
+
+
+
+<div class="hospital-list" style="box-shadow: 10px 10px 10px #E8E8E8; width:60%; margin: auto;">
+
+    <div class="card">
+        <div class="card-body" style="border-bottom: 2px solid #E8E8E8">
+            <h4 class="Hospital-name fw-bold mb-4" style="color: black;">Life Saver Hospital</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: red; margin-right: 17px;"></i>987 Cherry Boulevard, New York, NY 10001</p>
+            <p><i class="fa-solid fa-phone" style="color: deepskyblue; margin-right: 15px;"></i>0123456789</p>
+        </div>
+
+        <div class="card-body" style="border-bottom: 2px solid #E8E8E8">
+            <h4 class="Hospital-name fw-bold mb-4" style="color: black;">IRS Hospital</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: red; margin-right: 17px;"></i>654 Sycamore Lane, San Francisco, CA 94101</p>
+            <p><i class="fa-solid fa-phone" style="color: deepskyblue; margin-right: 15px;"></i>0123456789</p>
+        </div>
+
+        <div class="card-body" style="border-bottom: 2px solid #E8E8E8">
+            <h4 class="Hospital-name fw-bold mb-4" style="color: black;">Netaji Subhas Hospital</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: red; margin-right: 17px;"></i>321 Willow Street, Boston, MA 02101</p>
+            <p><i class="fa-solid fa-phone" style="color: deepskyblue; margin-right: 15px;"></i>0123456789</p>
+        </div>
+
+        <div class="card-body" style="border-bottom: 2px solid #E8E8E8">
+            <h4 class="Hospital-name fw-bold mb-4" style="color: black;">Harmony Health Center</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: red; margin-right: 17px;"></i>890 Walnut Avenue, Miami, FL 33101</p>
+            <p><i class="fa-solid fa-phone" style="color: deepskyblue; margin-right: 15px;"></i>0123456789</p>
+        </div>
+
+        <div class="card-body" style="border-bottom: 2px solid #E8E8E8">
+            <h4 class="Hospital-name fw-bold mb-4" style="color: black;">Serenity Medical Institute</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: red; margin-right: 17px;"></i>567 Birch Road, Austin, TX 78701</p>
+            <p><i class="fa-solid fa-phone" style="color: deepskyblue; margin-right: 15px;"></i>0123456789</p>
+        </div>
+
+        <div class="card-body" style="border-bottom: 2px solid #E8E8E8">
+            <h4 class="Hospital-name fw-bold mb-4" style="color: black;">Compassionate Care Hospital</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: red; margin-right: 17px;"></i>234 Cedar Lane, Seattle, WA 98101</p>
+            <p><i class="fa-solid fa-phone" style="color: deepskyblue; margin-right: 15px;"></i>0123456789</p>
+        </div>
+
+        <div class="card-body" style="border-bottom: 2px solid #E8E8E8">
+            <h4 class="Hospital-name fw-bold mb-4" style="color: black;">Renewal Regional Medical Center</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: red; margin-right: 17px;"></i>101 Elm Drive, Atlanta, GA 30301</p>
+            <p><i class="fa-solid fa-phone" style="color: deepskyblue; margin-right: 15px;"></i>0123456789</p>
+        </div>
+
+        <div class="card-body" style="border-bottom: 2px solid #E8E8E8">
+            <h4 class="Hospital-name fw-bold mb-4" style="color: black;">Unity Community Hospital</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: red; margin-right: 17px;"></i>456 Pine Street, Denver, CO 80202</p>
+            <p><i class="fa-solid fa-phone" style="color: deepskyblue; margin-right: 15px;"></i>0123456789</p>
+        </div>
+
+        <div class="card-body" style="border-bottom: 2px solid #E8E8E8">
+            <h4 class="Hospital-name fw-bold mb-4" style="color: black;">Vitality Healthcare Hub</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: red; margin-right: 17px;"></i>789 Oak Avenue, Portland, OR 97201</p>
+            <p><i class="fa-solid fa-phone" style="color: deepskyblue; margin-right: 15px;"></i>0123456789</p>
+        </div>
+
+        <div class="card-body">
+            <h4 class="Hospital-name fw-bold mb-4" style="color: black;">Tranquil Wellness Clinic</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: red; margin-right: 17px;"></i>123 Maple Street, Springfield, IL 62701</p>
+            <p><i class="fa-solid fa-phone" style="color: deepskyblue; margin-right: 15px;"></i>0123456789</p>
+        </div>
+    </div>
+
+
+    <div style="" id="sideNav" class="side-nav">
+        <span class="close-btn" onclick="closeNav()">&times;</span>
+        <img class="User-img" src="~/Content/Img/user.png" alt="User Image">
+        <h4 style="text-align: center;" class="fw-bold my-2">User Name</h4>
+        @Html.ActionLink("\u2B9A AI Assistant", "AiAssistant", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Take self assesment test", "AiAssistant", "Home", new { area = "" }, new { @class = "side-nav-items", @Id = "selftest-item" })
+        @Html.ActionLink("\u2B9A BMI Calculator", "LoginBmi", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Consult a specialist", "ConsultSpecialist", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Nearby Hospitals", "NearbyHospital", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Nearby Clinics", "NearbyClinic", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Need Help?", "NeedHelp", "Home", new { area = "" }, new { @class = "side-nav-items" })
+        @Html.ActionLink("\u2B9A Settings", "Settings?", "Home", new { area = "" }, new { @class = "side-nav-items" })
+    </div>
+
+    <script>
+        function openNav() {
+            document.getElementById("sideNav").style.width = "250px";
+            document.getElementById("sideNav").style.height = "1015px";
+            let positioButton = document.getElementById("sideNav").style.position = "absolute";
+            document.body.style.backgroundColor = "#9d9d9d";
+            if (positioButton === "absolute") {
+                document.getElementById("sideNav").style.marginTop = "150px";
+            }
+        }
+
+        function closeNav() {
+            document.getElementById("sideNav").style.width = "0";
+            document.getElementById("sideNav").style.height = "0";
+            document.body.style.backgroundColor = "white";
+        }
+        let selfButton = document.getElementById('selftest-item')
+        selfButton.addEventListener('click', () => {
+            alert("Error!Service not available at this time!")
+        })
+    </script>
+</div>
+

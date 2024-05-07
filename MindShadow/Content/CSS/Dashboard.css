@@ -1,0 +1,126 @@
+﻿
+
+
+.side-nav {
+    z-index: 1000;
+    height: 0;
+    width: 0;
+    /*position:sticky;
+    top: 200px;*/
+    left: 0;
+    background-color: #3385ff;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 20px;
+    box-shadow: 8px 0px 10px #666666;
+    border-right: 1px solid black;
+}
+
+.dashboard-burger-icon {
+    justify-content: start;
+    font-size: 30px;
+    color: black;
+    cursor: pointer;
+}
+
+.dashboard-burger-icon:hover {
+    background-color: #cccccc;
+    border: 1px solid grey;
+    border-radius: 3px;
+}
+
+.dashborad-snav {
+    margin: auto;
+    margin-top: 5px;
+    color: black;
+}
+
+.side-nav-items {
+    margin: 7px 10px;
+    text-decoration: none;
+    font-size: 17px;
+    color: black;
+    display: block;
+    border-bottom: 2px solid #3385ff;
+}
+
+.side-nav-items:hover {
+    color: #fff;
+    border-bottom-color:  red;
+    background-color: #66b3ff;
+}
+
+
+.User-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: auto;
+    margin-top: 30px;
+    display: block;
+}
+
+.close-btn {
+    position: absolute;
+    top: 4%;
+    right: 3%;
+    color: black;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #4d4d4d;
+}
+
+
+@media only screen and (max-width: 1050px) {
+    .close-btn {
+        top: 6%;
+    }
+
+    .User-img {
+        margin-top: 85px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    .close-btn {
+        top: 5%;
+    }
+
+    .User-img {
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .close-btn {
+        top: 6%;
+    }
+
+    .User-img {
+        margin-top: 80px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .close-btn {
+        top: 5%;
+    }
+
+    .User-img {
+        margin-top: 55px;
+    }
+
+    .side-nav{
+        width: 290px;
+    }
+}
+
+@media only screen and (max-width: 378px) {
+    .close-btn {
+        top: 6%;
+    }
+}
+

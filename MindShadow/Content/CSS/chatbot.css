@@ -1,0 +1,126 @@
+.autochat{
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgb(152, 224, 224);
+    
+}
+.autobutton{
+    margin-top: 80px;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+    border-radius: 50%;
+    height: 70px;
+    
+}
+.autobutton:hover{
+    background-color: rgb(224, 233, 230);
+    cursor: pointer;
+    color: blue;
+    border: 1px solid green;
+}
+.appenddivstyle{
+    display: none;
+    width: 250px;
+    height: auto;
+    background-color: white;
+    border-radius: 15px;
+    margin-bottom: 10px;
+    text-align: start;
+    padding-left: 10px;
+    padding-bottom: 1px;
+   
+}
+.diseases{
+    background-color: aquamarine;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;    
+}
+.diseases:hover{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.forhelp{
+    text-align: end;
+    padding-right: 10px;
+    display: none;
+}
+.symtom{
+    background-color: brown;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.symtom:hover{
+    text-decoration: underline;
+    color: rgb(190, 202, 18);
+    cursor: pointer;
+}
+.consult{
+    background-color:aquamarine;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+    
+}
+.consult:hover{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}
+.forhelp2{
+    display: none;
+}
+.forhelp3{
+    text-align: end;
+    padding-right: 10px;
+    display: none;
+}
+.doctor{
+    background-color: brown;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.doctor:hover{
+    text-decoration: underline;
+    color: rgb(190, 202, 18);
+    cursor: pointer;
+}
+.forhelp4{
+    text-align: center;
+    background-color: green;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 2px;  
+    display: none;
+}
+.forhelp4:hover{
+    text-decoration: underline;
+    color: rgb(41, 214, 214);
+    cursor: pointer;
+}
+.parastyle{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    font-style: oblique;
+}
+.forhelp5{
+    text-align: center;
+    background-color:aquamarine;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-left: 2px;  
+    display: none;
+}
+.forhelp5:hover{
+    text-decoration: underline;
+    color: blue;
+    cursor: pointer;
+}

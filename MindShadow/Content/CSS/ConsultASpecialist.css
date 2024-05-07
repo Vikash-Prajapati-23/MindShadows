@@ -1,0 +1,17 @@
+﻿.content-box{
+    display: flex;
+}
+
+@media only screen and (max-width: 500px) {
+    .dr-list {
+        width: 90%;
+    }
+
+    .content-box{
+        display: block;
+    }
+
+    .img-content{
+        width: 15rem;
+    }
+}

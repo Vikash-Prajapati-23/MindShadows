@@ -1,0 +1,204 @@
+﻿@model MindShadow.Models.Feedback
+
+@{
+    ViewBag.Title = "FeedBack";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container feedback-item-1">
+        Send Your Valuable FeedBack For Help Us To Improve Our service 
+    </div>
+
+    <div class="container feedback-item ">
+        <h3 class="pt-2">How Likely are you to recommend our service to a friend or colleague?</h3>
+        <hr />
+        <div class="row d-flex justify-content-between">
+            <div class="col-sm text-start ms-5 feedback-item-3">
+                <span>1. easy to use</span>
+            </div>
+            <div class="col-sm feedback-item-3">
+                <a id="feed1" href="#"><i class=" fa-solid fa-star "></i></a>
+                <a id="feed2" href="#"><i class=" fa-solid fa-star "></i></a>
+                <a id="feed3" href="#"><i class=" fa-solid fa-star "></i></a>
+                <a id="feed4" href="#"><i class=" fa-solid fa-star "></i></a>
+                <a id="feed5" href="#"><i class=" fa-solid fa-star "></i></a>
+
+            </div>
+            <script src="~/Content/JavaScript/FeedBack.js"></script>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <div class="col-sm text-start  ms-5 feedback-item-3">
+                <span>2.quality of Services</span>
+            </div>
+            <div class="col-sm feedback-item-3">
+                <a id="feed6" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed7" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed8" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed9" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed10" href="#"><i class=" fa-solid fa-star"></i></a>
+            </div>
+           <script>
+               let feedbackBtn = document.getElementById('feed6')
+               let feedbackBtn2 = document.getElementById('feed7')
+               let feedbackBtn3 = document.getElementById('feed8')
+               let feedbackBtn4 = document.getElementById('feed9')
+               let feedbackBtn5 = document.getElementById('feed10')
+
+               feedbackBtn.addEventListener('click', (e) => {
+                   feedbackBtn.style.color ='#ffff12'
+               })
+               feedbackBtn2.addEventListener('click', (e) => {
+                   feedbackBtn.style.color = '#ffff12'
+                   feedbackBtn2.style.color = '#ffff12'
+               })
+               feedbackBtn3.addEventListener('click', (e) => {
+                   feedbackBtn.style.color = '#ffff12'
+                   feedbackBtn2.style.color = '#ffff12'
+                   feedbackBtn3.style.color = '#ffff12'
+               })
+               feedbackBtn4.addEventListener('click', (e) => {
+                   feedbackBtn.style.color = '#ffff12'
+                   feedbackBtn2.style.color = '#ffff12'
+                   feedbackBtn3.style.color = '#ffff12'
+                   feedbackBtn4.style.color = '#ffff12'
+               })
+               feedbackBtn5.addEventListener('click', (e) => {
+                   feedbackBtn.style.color = '#ffff12'
+                   feedbackBtn2.style.color = '#ffff12'
+                   feedbackBtn3.style.color = '#ffff12'
+                   feedbackBtn4.style.color = '#ffff12'
+                   feedbackBtn5.style.color = '#ffff12'
+               })
+           </script>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <div class="col-sm text-start  ms-5 feedback-item-3">
+                <span>3. customer Support</span>
+            </div>
+            <div class="col-sm feedback-item-3">
+                <a id="feed11" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed12" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed13" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed14" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed15" href="#"><i class=" fa-solid fa-star"></i></a>
+            </div>
+            <script>
+                let feedbackBtn6 = document.getElementById('feed11')
+                let feedbackBtn7 = document.getElementById('feed12')
+                let feedbackBtn8 = document.getElementById('feed13')
+                let feedbackBtn9 = document.getElementById('feed14')
+                let feedbackBtn10 = document.getElementById('feed15')
+                feedbackBtn6.addEventListener('click', (e) => {
+                    feedbackBtn6.style.color ='#ffff12'
+                })
+                feedbackBtn7.addEventListener('click', (e) => {
+                    feedbackBtn6.style.color = '#ffff12'
+                    feedbackBtn7.style.color = '#ffff12'
+                })
+                feedbackBtn8.addEventListener('click', (e) => {
+                    feedbackBtn6.style.color = '#ffff12'
+                    feedbackBtn7.style.color = '#ffff12'
+                    feedbackBtn8.style.color = '#ffff12'
+                })
+                feedbackBtn9.addEventListener('click', (e) => {
+                    feedbackBtn6.style.color = '#ffff12'
+                    feedbackBtn7.style.color = '#ffff12'
+                    feedbackBtn8.style.color = '#ffff12'
+                    feedbackBtn9.style.color = '#ffff12'
+                })
+                feedbackBtn10.addEventListener('click', (e) => {
+                    feedbackBtn6.style.color = '#ffff12'
+                    feedbackBtn7.style.color = '#ffff12'
+                    feedbackBtn8.style.color = '#ffff12'
+                    feedbackBtn9.style.color = '#ffff12'
+                    feedbackBtn10.style.color = '#ffff12'
+                })
+            </script>
+        </div>
+        <div class="row d-flex justify-content-between">
+            <div class="col-sm text-start  ms-5 feedback-item-3">
+                <span>4. experience</span>
+            </div>
+            <div class="col-sm feedback-item-3">
+                <a id="feed16" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed17" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed18" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed19" href="#"><i class=" fa-solid fa-star"></i></a>
+                <a id="feed20" href="#"><i class=" fa-solid fa-star"></i></a>
+            </div>
+            <script>
+                let feedbackBtn11 = document.getElementById('feed16')
+                let feedbackBtn12 = document.getElementById('feed17')
+                let feedbackBtn13 = document.getElementById('feed18')
+                let feedbackBtn14 = document.getElementById('feed19')
+                let feedbackBtn15 = document.getElementById('feed20')
+
+                feedbackBtn11.addEventListener('click', (e) => {
+                    feedbackBtn11.style.color = '#ffff12'
+                })
+                feedbackBtn12.addEventListener('click', (e) => {
+                    feedbackBtn11.style.color = '#ffff12'
+                    feedbackBtn12.style.color = '#ffff12'
+                })
+                feedbackBtn13.addEventListener('click', (e) => {
+                    feedbackBtn11.style.color = '#ffff12'
+                    feedbackBtn12.style.color = '#ffff12'
+                    feedbackBtn13.style.color = '#ffff12'
+                })
+                feedbackBtn14.addEventListener('click', (e) => {
+                    feedbackBtn11.style.color = '#ffff12'
+                    feedbackBtn12.style.color = '#ffff12'
+                    feedbackBtn13.style.color = '#ffff12'
+                    feedbackBtn14.style.color = '#ffff12'
+                })
+                feedbackBtn15.addEventListener('click', (e) => {
+                    feedbackBtn11.style.color = '#ffff12'
+                    feedbackBtn12.style.color = '#ffff12'
+                    feedbackBtn13.style.color = '#ffff12'
+                    feedbackBtn14.style.color = '#ffff12'
+                    feedbackBtn15.style.color = '#ffff12'
+                })
+            </script>
+        </div>
+        
+        <div class="row mt-3">
+            <div class="col-sm text-start">
+                <h5>0-Extremly Unlikely</h5>
+            </div>
+            <div class="col-sm text-end">
+                <h5>5-Extremly Likely</h5>
+            </div>
+        </div>
+        <hr />
+        <div class="row text-start mx-0 mt-2">
+            <span>Name</span>
+            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "Please Fill Your Name" } })
+            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+        </div>
+        <div class="row text-start mx-0 mt-3">
+            <span>Email</span>
+            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "example@gmail.com" } })
+            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="row text-start mx-0 mt-3">
+            <span>What features can we add to improve?</span>
+            @Html.EditorFor(model => model.Add_features, new { htmlAttributes = new { @class = "form-control", @PlaceHolder = "We'd love to hear your suggestion" } })
+            @Html.ValidationMessageFor(model => model.Add_features, "", new { @class = "text-danger" })
+        </div>
+
+        <div class="form-group">
+            <div class="row mt-2 mx-5 pb-2 ">
+                <input type="submit" value="Send FeedBack" class="btn btn-success feedback-item-2 m-auto" />
+            </div>
+        </div>
+        <div class="text-start">
+            @Html.ActionLink("<<Back to Home>>", "Index", "Home", new { area = "" }, new { @class = "text-decoration-none " })
+        </div>
+
+    </div>
+
+}
+

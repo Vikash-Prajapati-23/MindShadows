@@ -1,0 +1,340 @@
+﻿@model MindShadow.Models.Clinic
+
+@{
+    ViewBag.Title = "ClinicRegistration";
+}
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div style=" border: 1px solid #fff; box-shadow: 0 0 10px 0 white;" class="Reg mt-2">
+
+    <!-- Basic Details part! -->
+    <center>
+        <img class="my-3" style="height:120px" src="~/Content/img/DrUser.png" />
+        <h2 style="color:#fff;">Clinic Registration</h2>
+    </center>
+    <div style="width: 95%; margin: auto; box-shadow: 3px 5px 10px #b30086;" class="card form-info mb-3">
+        <div style="background-color: red; color: #fff;" class="card-header mb-2">
+            <h3>Basic Details</h3>
+        </div>
+
+        <div style=" width: 90%; margin:auto;" class=" form-data mb-3">
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <lable>First Name<span style="color:red;">*</span></lable>
+                    <div class="Form-design">
+                        @Html.EditorFor(model => model.First_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.First_Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <lable>Last Name<span style="color:red;">*</span></lable>
+                    <div class="Form-design">
+                        @Html.EditorFor(model => model.Last_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Last_Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <lable>Father's Name</lable>
+                    <div class="Form-design">
+                        @Html.EditorFor(model => model.Father_Name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Father_Name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <lable>Date of Birth<span style="color:red;">*</span></lable>
+                    <div class="Form-design">
+                        @Html.EditorFor(model => model.DOB, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.DOB, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-2">
+                    <lable>Sex<span style="color:red;">*</span></lable>
+                    <select @Html.EditorFor(model => model.Sex, new { htmlAttributes = new { @class = "form-control form-select col-sm-4 mb-3" } })
+                            @Html.ValidationMessageFor(model => model.Sex, "", new { @class = "text-danger" })>
+                        <option selected>Select</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Others</option>
+                    </select>
+                </div>
+                <div class="col-sm-6 mb-2">
+                    <lable>Religion<span style="color:red;">*</span></lable>
+                    <select @Html.EditorFor(model => model.Religion, new { htmlAttributes = new { @class = "form-control form-select col-sm-4 mb-3" } })
+                            @Html.ValidationMessageFor(model => model.Religion, "", new { @class = "text-danger" })>
+                        <option selected>Select</option>
+                        <option value="1">Hinduism</option>
+                        <option value="2">Buddhism</option>
+                        <option value="3">Jainsm</option>
+                        <option value="3">Islam</option>
+                        <option value="3">Others</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <lable>Email</lable>
+                    <div class="Form-design">
+                        @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <lable>Contact</lable>
+                    <div class="Form-design">
+                        @Html.EditorFor(model => model.Phone, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-4 ">
+                    <lable>State<span style=" color:red;">*</span></lable>
+                    <select @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control form-select col-sm-4 mb-3" } })
+                            @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })>
+                        <option value="">Select state</option>
+                        <option value="AN">Andaman and Nicobar Islands</option>
+                        <option value="AP">Andhra Pradesh</option>
+                        <option value="AR">Arunachal Pradesh</option>
+                        <option value="AS">Assam</option>
+                        <option value="BR">Bihar</option>
+                        <option value="CH">Chandigarh</option>
+                        <option value="CT">Chhattisgarh</option>
+                        <option value="DN">Dadra and Nagar Haveli</option>
+                        <option value="DD">Daman and Diu</option>
+                        <option value="DL">Delhi</option>
+                        <option value="GA">Goa</option>
+                        <option value="GJ">Gujarat</option>
+                        <option value="HR">Haryana</option>
+                        <option value="HP">Himachal Pradesh</option>
+                        <option value="JK">Jammu and Kashmir</option>
+                        <option value="JH">Jharkhand</option>
+                        <option value="KA">Karnataka</option>
+                        <option value="KL">Kerala</option>
+                        <option value="LA">Ladakh</option>
+                        <option value="LD">Lakshadweep</option>
+                        <option value="MP">Madhya Pradesh</option>
+                        <option value="MH">Maharashtra</option>
+                        <option value="MN">Manipur</option>
+                        <option value="ML">Meghalaya</option>
+                        <option value="MZ">Mizoram</option>
+                        <option value="NL">Nagaland</option>
+                        <option value="OR">Odisha</option>
+                        <option value="PY">Puducherry</option>
+                        <option value="PB">Punjab</option>
+                        <option value="RJ">Rajasthan</option>
+                        <option value="SK">Sikkim</option>
+                        <option value="TN">Tamil Nadu</option>
+                        <option value="TG">Telangana</option>
+                        <option value="TR">Tripura</option>
+                        <option value="UP">Uttar Pradesh</option>
+                        <option value="UT">Uttarakhand</option>
+                        <option value="WB">West Bengal</option>
+                    </select>
+                </div>
+                <div class="col-sm-4 ">
+                    <lable>City<span style="color:red;">*</span></lable>
+                    @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                </div>
+                <div class="col-sm-4 ">
+                    <lable class="form-lable">Pincode<span style="color:red;">*</span></lable>
+                    <div class="Form-design">
+                        @Html.EditorFor(model => model.Pincode, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Pincode, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class=" mb-2">
+                <lable class="form-lable">Address<span style=" width:15%; color:red;">*</span></lable>
+                <div class="Form-design row mx-1">
+                    @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control form-control form-inp ", @Type = "text", @PlaceHolder = "Full Address" } })
+                    @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Qualification Details part! -->
+    <div style="width: 95%; margin: auto; box-shadow: 3px 5px 10px #b30086;" class="card form-info mb-3">
+        <div style="background-color: red; color: #fff;" class="card-header">
+            <h3>Qualification Details</h3>
+        </div>
+        <div style=" width: 90%; margin:auto;" class="form-data">
+            <div class="row mt-3">
+                <div class="col-sm-6 mb-3">
+                    <lable>Name of your last Qualifying exam<span style="color:red;">*</span></lable>
+                    <div>
+                        @Html.EditorFor(model => model.Last_qualifying_exam, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Last_qualifying_exam, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-sm-6 mb-3">
+                    <lable>Name of the Board/Council<span style="color:red;">*</span></lable>
+                    <div>
+                        @Html.EditorFor(model => model.Board_name, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Board_name, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <lable>Year of Qualifying exam<span style="color:red;">*</span></lable>
+                    <div>
+                        @Html.EditorFor(model => model.Passing_year, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Passing_year, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-sm-6 mb-3">
+                    <lable>Total marks Obtained<span style="color:red;">*</span></lable>
+                    <div>
+                        @Html.EditorFor(model => model.Marks_obtain, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Marks_obtain, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-1">
+                    <lable>Upload Marksheets<span style="color:red;">*</span></lable>
+                    <p class="para">(Result of the last qualifying exam.)</p>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div>
+                        @Html.EditorFor(model => model.Marks_upload, new { htmlAttributes = new { @class = "form-control multiple", @Type="file" } })
+                        @Html.ValidationMessageFor(model => model.Marks_upload, "", new { @class = "text-danger" })
+
+                        @*@Html.EditorFor(model => model.Marks_upload1, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Marks_upload1, "", new { @class = "text-danger" })*@
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-sm-6 mb-3">
+                    <lable>Passing year of 10th standard<span style="color:red;">*</span></lable>
+                    <div>
+                        @Html.EditorFor(model => model.C_10th_passing_year, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.C_10th_passing_year, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-sm-6 mb-3">
+                    <lable>Total marks obtained in 10th standard<span style="color:red;">*</span></lable>
+                    <div>
+                        @Html.EditorFor(model => model.C_10th_marks_obtain, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.C_10th_marks_obtain, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-1">
+                    <lable>Upload Marksheets<span style="color:red;">*</span></lable>
+                    <p class="para">(Upload your 10th Marksheet(Both sides of marksheet) in PDF formate and file size should be under 200kb)</p>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div>
+                        @Html.EditorFor(model => model.C_10th_marksheet_upload, new { htmlAttributes = new { @class = "form-control multiple", @Type="file" } })
+                        @Html.ValidationMessageFor(model => model.C_10th_marksheet_upload, "", new { @class = "text-danger" })
+
+                        @*@Html.EditorFor(model => model.C_10th_marksheet_upload1, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.C_10th_marksheet_upload1, "", new { @class = "text-danger" })*@
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <lable>Passing year of 12th standard<span style="color:red;">*</span></lable>
+                    <div>
+                        @Html.EditorFor(model => model.C_12th_passing_year, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.C_12th_passing_year, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-sm-6 mb-3">
+                    <lable>Total marks obtained in 12th standard<span style="color:red;">*</span></lable>
+                    <div>
+                        @Html.EditorFor(model => model.C_12th_marks_obtain, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.C_12th_marks_obtain, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm-6 mb-3">
+                    <lable>Upload Marksheets<span style="color:red;">*</span></lable>
+                    <p class="para">(Upload your 12th Marksheet(Both sides of marksheet) in PDF formate and file size should be under 200kb)</p>
+                </div>
+                <div class="col-sm-6 mb-3">
+                    <div>
+                        @Html.EditorFor(model => model.C_12th_marksheet_upload, new { htmlAttributes = new { @class = "form-control multiple", @Type="file" } })
+                        @Html.ValidationMessageFor(model => model.C_12th_marksheet_upload, "", new { @class = "text-danger" })
+
+                        @*@Html.EditorFor(model => model.C_12th_matksheet_upload1, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.C_12th_matksheet_upload1, "", new { @class = "text-danger" })*@
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- Password part! -->
+    <div style=" margin: auto; box-shadow: 3px 5px 10px #b30086; " class="card form-info mb-3">
+        <div style="background-color:red; color:#fff;" class="card-header">
+            <h3>Create User ID & Password</h3>
+        </div>
+
+        <div style=" width: 90%; margin:auto;" class="form-data">
+            <div class="row mt-3">
+                <div class="col-sm-6 mb-3">
+                    <lable>Create User ID<span style="color:red;">*</span></lable>
+                    <div>
+                        @Html.EditorFor(model => model.Clinic_id, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Clinic_id, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="col-sm-6 mb-3">
+                    <lable>Create Password<span style="color:red;">*</span></lable>
+                    <div>
+                        @Html.EditorFor(model => model.Password, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+            </div>
+
+            <input style="border-radius: 5px;" value="Submit" type="submit" class="Sub-bt mb-2" />
+
+        </div>
+
+    </div>
+
+    @Html.ActionLink("<<Back to Home>>", "Index", "Home", new { area = "" }, new { @class = "text-decoration-none text-black" })
+
+</div>
+
+}
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

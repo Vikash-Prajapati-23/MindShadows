@@ -1,0 +1,53 @@
+﻿body {
+}
+
+.TC_content{
+    width: 90%;
+}
+
+.TC-Header {
+    height: 70px;
+    width: 95%;
+    margin: auto;
+    background-color: mediumvioletred;
+    box-shadow: 2px 5px 8px #808080;
+    position: relative;
+}
+
+.tc-main-heading {
+    color: #fff;
+    text-align: center;
+    position: relative;
+    top: 1rem;
+    text-shadow: 5px 3px 10px skyblue;
+}
+
+.tc-heading {
+    color: dodgerblue;
+
+}
+
+.tc-para-content {
+    text-align: justify;
+    color: #595959;
+}
+
+.para-gap {
+    margin-bottom: 30px;
+}
+
+@media only screen and (max-width: 570px) {
+    .TC-Header{
+        height: 60px;
+    }
+}
+
+@media only screen and (max-width: 290px) {
+    .tc-main-heading {
+        font-size: 15px;
+    }
+
+    .TC-Header {
+        height: 50px;
+    }
+}
