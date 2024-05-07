@@ -10,7 +10,7 @@ namespace MindShadow.Controllers
     public class HomeController : Controller
     {
         MindShadowEntities db2 = new MindShadowEntities();
-        public ActionResult Index()
+        public ActionResult index()
         {
             return View();
         }
