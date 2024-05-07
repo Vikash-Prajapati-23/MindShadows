@@ -2433,7 +2433,7 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\BMI.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\index.cshtml" />
     <Content Include="Views\Home\MissionVision.cshtml" />
     <Content Include="Views\User\SelfRegistration.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
