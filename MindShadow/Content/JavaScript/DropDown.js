@@ -5,6 +5,7 @@ liItem.style.color = 'black'
 ClickBtn.addEventListener('click', () => {
     if (liItem.style.display === 'none') {
         liItem.style.display = 'block'
+        
     } else {
         liItem.style.display = 'none'
     }

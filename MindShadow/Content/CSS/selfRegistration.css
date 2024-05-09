@@ -1,0 +1,24 @@
+﻿
+.Self-Reg {
+    width: 650px;
+}
+@media only screen and (max-width:480px){
+    .container-item {
+        width: auto;
+    }
+    nav {
+        width: auto;
+    }
+    .Self-Reg{
+        width:95%;
+    }
+    .Foot-sec{
+        display:flex;
+        text-align:start;
+        margin-top:5px;
+    }
+    .drop-11{
+        z-index:99999;
+    }
+    
+}

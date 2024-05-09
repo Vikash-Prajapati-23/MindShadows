@@ -208,6 +208,7 @@
     <Content Include="Content\CSS\ConsultASpecialist.css" />
     <Content Include="Content\CSS\CustomCss.css" />
     <Content Include="Content\CSS\Dashboard.css" />
+    <Content Include="Content\CSS\DropDown.css" />
     <Content Include="Content\CSS\Dr_Registration.css" />
     <Content Include="Content\CSS\Feedback.css" />
     <Content Include="Content\CSS\Footer.css" />
@@ -215,6 +216,7 @@
     <Content Include="Content\CSS\LivedExperience.css" />
     <Content Include="Content\CSS\Login.css" />
     <Content Include="Content\CSS\MediaQuery.css" />
+    <Content Include="Content\CSS\MediaQuery2.css" />
     <Content Include="Content\CSS\Mission_Vision.css" />
     <Content Include="Content\CSS\Navbar.css" />
     <Content Include="Content\CSS\T&amp;C.css" />

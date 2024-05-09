@@ -25,12 +25,15 @@
     <link href="~/Content/CSS/MediaQuery.css" rel="stylesheet" />
     <link href="~/Content/CSS/ConsultASpecialist.css" rel="stylesheet" />
     <link href="~/Content/CSS/chatbot.css" rel="stylesheet" />
+    <link href="~/Content/CSS/MediaQuery2.css" rel="stylesheet" />
+    <link href="~/Content/CSS/DropDown.css" rel="stylesheet" />
+    <link href="~/Content/CSS/selfRegistration.css" rel="stylesheet" />
 </head>
 <body>
     <header>
         <div class="container-item">
             <div class="con-box">
-                <img  src="~/Content/img/Logo.png" alt="Logo" width="70" class="d-inline-block img-item1" />
+                <img  src="~/Content/img/Logo.png" alt="Logo"  width="70" class="d-inline-block img-item1" />
                 <span class="img-item">MINDSHADOWS</span>
             </div>
             <div class="welcome2">
@@ -40,18 +43,16 @@
             <div class="con-box">
                 <span class="navbar-brand mb-0 h1">
                     <a href="https://twitter.com/MindShadow_team" target="_blank"><i style="color: #0dbab1; font-size: 25px" onmouseover="this.style.color='#32eddc'" onmouseout="this.style.color='#0dbab1'" class="fa-brands fa-twitter px-2 fcon"></i></a>
-                    <a href="https://www.facebook.com/profile.php?id=61559288314624" target="_blank"><i style="color: #5872f5; font-size: 25px " onmouseover="this.style.color='#7a91eb'" onmouseout="this.style.color='#5872f5'" class="fa-brands fa-facebook icon-item px-2 fcon"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61559288314624" target="_blank"><i style="color: #5872f5; font-size: 25px " onmouseover="this.style.color='#7a91eb'" onmouseout="this.style.color='#5872f5'" class="fa-brands fa-facebook icon-item px-2 fcon fcon-item"></i></a>
                     <a href="https://www.instagram.com/mindshadow_team/" target="_blank"><i style="color: #e60e6c; font-size: 25px " onmouseover="this.style.color='#f569ad'" onmouseout="this.style.color='#e60e6c'" class="fa-brands fa-instagram px-2 fcon"></i></a>
                     <a href="https://www.youtube.com/channel/UCAKxCqYOmCQ6IZrFNPk7Rbw" target="_blank"><i style="color: #e60e24; font-size: 25px " onmouseover="this.style.color='#cf7879'" onmouseout="this.style.color='#e60e24'" class="fa-brands fa-youtube px-2 fcon"></i></a>
                 </span>
 
             </div>
-
-
         </div>
     </header>
 
-    <nav id="navitem" class="navbar navbar-expand-sm navbar-expand-md navbar-toggleable-md navbar-toggleable-sm sticky-top">
+    <nav id="navitem" class="custom-nav navbar navbar-expand-sm navbar-expand-md navbar-toggleable-md navbar-toggleable-sm sticky-top">
         <div class="container-fluid">
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -70,12 +71,12 @@
                 <ul class="navbar-nav flex-grow-1 justify-content-end">
                     <li>
                         <button id="drBtn" type="submit" class="btn nav-link fw-bold list-group-item">Registration</button>
-                        <ul class="drop-1 z-1 position-absolute">
-                            <li class="drop-1">@Html.ActionLink("Self Registration", "SelfRegistration", "User", new { area = "" }, new { @class = "text-black text-start fs-6 fw-semibold fst-italic text-decoration-none " })</li>
-                            <li class="drop-1">@Html.ActionLink("Doctor's Registration", "DrRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none " })</li>
+                        <ul class="drop-1 drop-11 z-1 position-absolute">
+                            <li class="drop-1">@Html.ActionLink("Self Registration", "SelfRegistration", "User", new { area = "" }, new { @class = "text-black text-start fs-6 fw-semibold fst-italic text-decoration-none  " })</li>
+                            <li class="drop-1">@Html.ActionLink("Doctor's Registration", "DrRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none" })</li>
                             <li class="drop-1">@Html.ActionLink("Gardians registration", "GardianRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none " })</li>
-                            <li class="drop-1">@Html.ActionLink("Clinic Registration", "ClinicRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none " })</li>
-                            <li class="drop-1">@Html.ActionLink("Diagonostic Registration", "DiagonostRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none " })</li>
+                            <li class="drop-1 ">@Html.ActionLink("Clinic Registration", "ClinicRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none " })</li>
+                            <li class="drop-1">@Html.ActionLink("Diagnostic Registration", "DiagonostRegistration", "User", new { area = "" }, new { @class = "text-black fs-6 fw-semibold fst-italic text-decoration-none " })</li>
 
                         </ul>
 
@@ -92,8 +93,8 @@
                     else
                     {
 
-                        <li>@Html.ActionLink("Login", "Login", "User", new { area = "" }, new { @class = "nav-link fw-bold list-group-item" })</li>
-                        <li>@Html.ActionLink("BMI Calculator", "BMI", "Home", new { area = "" }, new { @class = "fw-bold list-group-item" })</li>
+                        <li>@Html.ActionLink("Login", "Login", "User", new { area = "" }, new { @class = "nav-link fw-bold list-group-item logBtn", @Id="logBtn" })</li>
+                        <li>@Html.ActionLink("BMI Calculator", "BMI", "Home", new { area = "" }, new { @class = "fw-bold list-group-item logBtn" })</li>
                     }
 
 
@@ -179,10 +180,10 @@
                             sangha playground, kolkata,
                             700154, IIT BORAL
                         </p>
-                        <p class="my-1"><i style="color: black; font-size: 16px" class="fa-solid fa-phone"></i> +91 2255444400</p>
-                        <a href="#" class="foot-a"><i style="color: black; font-size: 16px" class="fa-solid fa-envelope"></i> mindshadows@gmail.com</a><br />
+                        <p class="my-1"><i style="color: black; font-size: 16px" class="fa-solid fa-phone"></i> +91 9932504005</p>
+                        <a href="#" class="foot-a"><i style="color: black; font-size: 16px" class="fa-solid fa-envelope"></i> teammindshadow@gmail.com</a><br />
                         <a href="https://www.youtube.com/channel/UCAKxCqYOmCQ6IZrFNPk7Rbw" target="_blank"><i style="color:red; font-size:30px;" class="fa-brands fa-youtube me-1"></i></a>
-                        <a href="#"><i style="color: blue; font-size: 30px" class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.facebook.com/profile.php?id=61559288314624"><i style="color: blue; font-size: 30px" class="fa-brands fa-square-facebook"></i></a>
                         <a href="https://www.instagram.com/mindshadow_team/" target="_blank"><i style="color: red; font-size: 30px" class="fa-brands fa-square-instagram mx-1"></i></a>
                         <a href="https://twitter.com/MindShadow_team" target="_blank"><i style="color: blue; font-size: 30px" class="fa-brands fa-twitter"></i></a>
                     </div>

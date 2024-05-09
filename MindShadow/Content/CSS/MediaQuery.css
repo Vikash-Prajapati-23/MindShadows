@@ -1,55 +1,68 @@
 ﻿
+
 /*for mobile device(portrait and landscape)*/
 @media only screen and (max-width:767px) {
-    .text-item{
-        font-size:10px;
+    .text-item {
+        font-size: 10px;
     }
-    .welcome2{
-        width:370px;
+
+    .welcome2 {
+        width: 370px;
     }
+
     .welcome {
-        font-size:19px;
+        font-size: 19px;
         animation: lettershow 8s steps(80, end) infinite;
     }
-    .info-contain{
-        height:670px
+
+    .info-contain {
+        height: 670px
     }
-    .info-contain7{
-        height:600px;
+
+    .info-contain7 {
+        height: 600px;
     }
-    .adiv1{
-        width:300px;
+
+    .adiv1 {
+        width: 300px;
     }
-    .adiv2{
-        width:300px;
+
+    .adiv2 {
+        width: 300px;
     }
-    .adiv3{
-        width:130px;
-        height:50px;
-        font-size:12px;  
+
+    .adiv3 {
+        width: 130px;
+        height: 50px;
+        font-size: 12px;
     }
-    .adiv h1{
-        font-size:20px;
-        margin-bottom:0px;
+
+    .adiv h1 {
+        font-size: 20px;
+        margin-bottom: 0px;
     }
-    .adiv{
-        font-size:10px;
+
+    .adiv {
+        font-size: 10px;
     }
+
     .mm2 {
-         margin-left:50px;
-       
+        margin-left: 50px;
     }
-    .mm3{
-        margin-left:60px;
+
+    .mm3 {
+        margin-left: 60px;
     }
-    .mm4{
-        width:70px;
-        margin-left:60px;
-        margin-top:5px;
+
+    .mm4 {
+        width: 70px;
+        margin-left: 60px;
+        margin-top: 5px;
     }
-    .mm{        
-       margin-left:121px;
-       margin-top:5px;
+
+    .mm {
+        margin-left: 121px;
+        margin-top: 5px;
     }
 }
 /*for tablet device(portrait and landscap)*/
