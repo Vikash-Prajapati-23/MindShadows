@@ -16,6 +16,11 @@
         <img class="my-3" style="height:120px" src="~/Content/img/DrUser.png" />
         <h2 style="color:#fff;">Diagonost Registration</h2>
     </center>
+
+    <div style="text-align:center">
+        <h4>@ViewBag.Diagnotification</h4>
+        <h4>@ViewBag.Diagnotification2</h4>
+    </div>
     <div style="width: 95%; margin: auto; box-shadow: 3px 5px 10px #b30086;" class="card form-info mb-3">
         <div style="background-color: red; color: #fff;" class="card-header mb-2">
             <h3>Basic Details</h3>
@@ -216,11 +221,11 @@
                 </div>
                 <div class="col-sm-6 mb-3">
                     <div>
-                        @Html.EditorFor(model => model.Marks_upload, new { htmlAttributes = new { @class = "form-control multiple", @Type="file" } })
+                        @Html.EditorFor(model => model.Marks_upload, new { htmlAttributes = new { @class = "form-control multiple", @Type = "file" } })
                         @Html.ValidationMessageFor(model => model.Marks_upload, "", new { @class = "text-danger" })
 
                         @*@Html.EditorFor(model => model.Marks_upload1, new { htmlAttributes = new { @class = "form-control multiple", @Type = "file" } })
-                        @Html.ValidationMessageFor(model => model.Marks_upload1, "", new { @class = "text-danger"  })*@
+                            @Html.ValidationMessageFor(model => model.Marks_upload1, "", new { @class = "text-danger"  })*@
                     </div>
                 </div>
             </div>
@@ -250,7 +255,7 @@
                 </div>
                 <div class="col-sm-6 mb-3">
                     <div>
-                        @Html.EditorFor(model => model.C_10th_marksheet_upload, new { htmlAttributes = new { @class = "form-control multiple ", @Type="file" } })
+                        @Html.EditorFor(model => model.C_10th_marksheet_upload, new { htmlAttributes = new { @class = "form-control multiple ", @Type = "file" } })
                         @Html.ValidationMessageFor(model => model.C_10th_marksheet_upload, "", new { @class = "text-danger" })
 
                         @*@Html.EditorFor(model => model.C_10th_marksheet_upload1, new { htmlAttributes = new { @class = "form-control" } })
@@ -284,7 +289,7 @@
                 </div>
                 <div class="col-sm-6 mb-3">
                     <div>
-                        @Html.EditorFor(model => model.C_12th_marksheet_upload, new { htmlAttributes = new { @class = "form-control multiple", @Type="file" } })
+                        @Html.EditorFor(model => model.C_12th_marksheet_upload, new { htmlAttributes = new { @class = "form-control multiple", @Type = "file" } })
                         @Html.ValidationMessageFor(model => model.C_12th_marksheet_upload, "", new { @class = "text-danger" })
 
                         @*@Html.EditorFor(model => model.C_12th_matksheet_upload1, new { htmlAttributes = new { @class = "form-control" } })

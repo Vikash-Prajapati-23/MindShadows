@@ -1,0 +1,38 @@
+﻿@media only screen and (max-width:480px) {
+    .feedback-item {
+        margin-top: 10px;
+        text-align: center;
+        width: 100%;
+        background-color: #34eb71;
+        border-radius: 10px;
+    }
+    .feedback-item-3 {
+        font-size: 20px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-style: oblique;
+        font-weight: bold;
+    }
+    .feedback-item-2 {
+        width: 80%;
+        border-radius: 25px;
+    }
+    .live-item-2 {
+        width:95%;  
+    }
+    .live-item-3 {
+        width: 100%;
+    }
+    .blog-item-change{
+        width:210%;
+    }
+    .blog-item-change1{
+        display:none;
+    }
+    .img-content{
+        width:140%;
+    }
+    .help-item{
+        width:100%;
+    }
+    
+}

@@ -75,12 +75,12 @@
     .blog-item2{
         font-size:14px;
     }
-    .blog-item22{
+    /*.blog-item22{
         width:360px;
         font-size:14px;
         height:200px;
         overflow-x:hidden;
-    }
+    }*/
     .log-item{
         display:none;
     }
@@ -107,9 +107,4 @@
     }
     
     
-    
-    /*.drop-11{
-        z-index:99999;
-        position:absolute;
-    }*/
 }

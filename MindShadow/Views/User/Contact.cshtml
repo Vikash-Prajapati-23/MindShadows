@@ -7,64 +7,68 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    <main aria-labelledby="title">
-        <div class=" container mx-auto row text-center condiv">
-            <h1>CONTACT US</h1>
-            <span>Without Feel Any Hesitate</span>
-            <hr />
-        </div>
+<main aria-labelledby="title">
+    <div class=" container mx-auto row text-center condiv">
+        <h1>CONTACT US</h1>
+        <span>Without Feel Any Hesitate</span>
+        <hr />
+    </div>
+    <div style="text-align:center">
+        <h4>@ViewBag.contactnotification</h4>
+        <h4>@ViewBag.contactnotification2</h4>
+    </div>
 
-        <section>
-            <div class="container pt-2">
-                <div class="row">
-                    <div class="col-sm-6 pt-4 formdiv ">
-                        <h4 style="text-align:center">Message Us</h4>
+    <section>
+        <div class="container pt-2">
+            <div class="row">
+                <div class="col-sm-6 pt-4 formdiv ">
+                    <h4 style="text-align:center">Message Us</h4>
 
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <lebel class="lebel">First Name</lebel>
-                                @Html.EditorFor(model => model.First_Name, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.First_Name, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-sm-6">
-                                <lebel class="lebel">Last Name</lebel>
-                                @Html.EditorFor(model => model.Last_Name, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Last_Name, "", new { @class = "text-danger" })
-                            </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <lebel class="lebel">First Name</lebel>
+                            @Html.EditorFor(model => model.First_Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.First_Name, "", new { @class = "text-danger" })
                         </div>
-
-                        <div class="row">
-                            <div class="col-sm-6">
-                                <lebel class="lebel">Email Id</lebel>
-                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-                            </div>
-                            <div class="col-sm-6">
-                                <lebel class="lebel">Mobile No</lebel>
-                                @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "form-control" } })
-                                @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
-                            </div>
+                        <div class="col-sm-6">
+                            <lebel class="lebel">Last Name</lebel>
+                            @Html.EditorFor(model => model.Last_Name, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Last_Name, "", new { @class = "text-danger" })
                         </div>
-                        <lebel class="lebel">Description</lebel>
-                        @*<textarea class="form-control" rows="6" placeholder="Enter the query/message/etc"></textarea>*@
-                        @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control h-25 w-50 text-sm-start" } })
-                        @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
-
-                        <button class="btn btn-secondary mt-2 mb-3">Submit</button>
                     </div>
 
-                    <div class="col-sm-6 ">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.6156413281574!2d88.37139257398066!3d22.44348803769263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0271c7c0372afb%3A0xdd2f223767c26a2!2sFuture%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1705923401829!5m2!1sen!2sin" width="560" frameborder="1" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <lebel class="lebel">Email Id</lebel>
+                            @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                        </div>
+                        <div class="col-sm-6">
+                            <lebel class="lebel">Mobile No</lebel>
+                            @Html.EditorFor(model => model.Mobile, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Mobile, "", new { @class = "text-danger" })
+                        </div>
                     </div>
+                    <lebel class="lebel">Description</lebel>
+                    @*<textarea class="form-control" rows="6" placeholder="Enter the query/message/etc"></textarea>*@
+                    @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control h-25 w-50 text-sm-start" } })
+                    @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+
+                    <button class="btn btn-secondary mt-2 mb-3">Submit</button>
+                </div>
+
+                <div class="col-sm-6 ">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3687.6156413281574!2d88.37139257398066!3d22.44348803769263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0271c7c0372afb%3A0xdd2f223767c26a2!2sFuture%20Institute%20of%20Technology!5e0!3m2!1sen!2sin!4v1705923401829!5m2!1sen!2sin" width="560" frameborder="1" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 </div>
+
             </div>
-            <div class="text-start">
-                @Html.ActionLink("<<Back to Home>>", "Index", "Home", new { area = "" }, new { @class = "text-decoration-none " })
-            </div>
-        </section>
-    </main>
+        </div>
+        <div class="text-start">
+            @Html.ActionLink("<<Back to Home>>", "Index", "Home", new { area = "" }, new { @class = "text-decoration-none " })
+        </div>
+    </section>
+</main>
 
 }
 

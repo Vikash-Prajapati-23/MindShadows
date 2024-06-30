@@ -23,14 +23,14 @@ namespace MindShadow.Controllers
         {
             if (db.Users.Any(X => X.User_ID == user.User_ID))
             {
-                ViewBag.notifi = "Data Already Exist!";
+                ViewBag.selfnotification = "Data Already Exist!";
             }
             else
             {
 
                 db.Users.Add(user);
                 db.SaveChanges();
-                ViewBag.notification = "Record added successully";
+                ViewBag.selfnotification2 = "Record added successully";
                 return RedirectToAction("SelfRegistration", "User");
 
             }
@@ -75,14 +75,14 @@ namespace MindShadow.Controllers
         {
             if (db.Gardians.Any(X => X.Gardian_Id == gardian.Gardian_Id))
             {
-                ViewBag.notifi = "Data Already Exist!";
+                ViewBag.gardiannotification = "Data Already Exist!";
             }
             else
             {
 
                 db.Gardians.Add(gardian);
                 db.SaveChanges();
-                ViewBag.notification = "Record added successully";
+                ViewBag.gardiannotification2 = "Record added successully";
                 return RedirectToAction("GardianRegistration", "User");
             }
             return View();
@@ -96,14 +96,14 @@ namespace MindShadow.Controllers
         {
             if (db.Doctors.Any(X => X.Doctor_id == doctor.Doctor_id))
             {
-                ViewBag.notifi = "Data Already Exist!";
+                ViewBag.Drnotification = "Data Already Exist!";
             }
             else
             {
 
                 db.Doctors.Add(doctor);
                 db.SaveChanges();
-                ViewBag.notification = "Record added successully";
+                ViewBag.Drnotification2 = "Record added successully";
                 return RedirectToAction("DrRegistration", "User");
             }
             return View();
@@ -117,14 +117,14 @@ namespace MindShadow.Controllers
         {
             if (db.Clinics.Any(X => X.Clinic_id == clinic.Clinic_id))
             {
-                ViewBag.notifi = "Data Already Exist!";
+                ViewBag.Clinicnotification = "Data Already Exist!";
             }
             else
             {
 
                 db.Clinics.Add(clinic);
                 db.SaveChanges();
-                ViewBag.notification = "Record added successully";
+                ViewBag.Clinicnotification2 = "Record added successully";
                 return RedirectToAction("ClinicRegistration", "User");
 
             }
@@ -139,14 +139,14 @@ namespace MindShadow.Controllers
         {
             if (db.Diagonosts.Any(X => X.Diagonost_id == diagonost.Diagonost_id))
             {
-                ViewBag.notifi = "Data Already Exist!";
+                ViewBag.Diagnotification = "Data Already Exist!";
             }
             else
             {
 
                 db.Diagonosts.Add(diagonost);
                 db.SaveChanges();
-                ViewBag.notification = "Record added successully";
+                ViewBag.Diagnotification2 = "Record added successully";
                 return RedirectToAction("DiagonostRegistration", "User");
             }
             return View();
@@ -160,14 +160,14 @@ namespace MindShadow.Controllers
         {
             if (db.Reviews.Any(X => X.Email == review.Email))
             {
-                ViewBag.notifi = "Data Already Exist!";
+                ViewBag.Reviewnotification = "Data Already Exist!";
             }
             else
             {
 
                 db.Reviews.Add(review);
                 db.SaveChanges();
-                ViewBag.notification = "Record added successully";
+                ViewBag.Reviewnotification2 = "Record added successully";
             }
             return View();
         }
@@ -180,7 +180,7 @@ namespace MindShadow.Controllers
         {
             if (db.Feedbacks.Any(X => X.Email == feedback.Email))
             {
-                ViewBag.notifi = "Data Already Exist!";
+                ViewBag.notifi = "Data Already Exist!Please change your email Id for suggest again!";
             }
             else
             {
@@ -201,14 +201,14 @@ namespace MindShadow.Controllers
         {
             if (db.Contacts.Any(X => X.Email == contact.Email))
             {
-                ViewBag.notifi = "Data Already Exist!";
+                ViewBag.contactnotification = "Data Already Exist!";
             }
             else
             {
 
                 db.Contacts.Add(contact);
                 db.SaveChanges();
-                ViewBag.notification = "Record added successully";
+                ViewBag.contactnotification2 = "Record added successully";
 
             }
             return View();
@@ -222,13 +222,13 @@ namespace MindShadow.Controllers
         {
             if(db.Helps.Any(x =>x.Problem == help.Problem))
             {
-                ViewBag.notification = "Your problem already recorded.Please send another problem.";
+                ViewBag.Helpnotification = "Your problem already recorded.Please send another problem.";
             }
             else
             {
                 db.Helps.Add(help);
                 db.SaveChanges();
-                ViewBag.notify = "Thanks for Send your problem. We will solve your problem within 24 hours.Thank You!";
+                ViewBag.Helpnotification = "Thanks for Send your problem. We will solve your problem within 24 hours.Thank You!";
             }
             return View();
         }
